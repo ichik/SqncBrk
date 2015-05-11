@@ -11,7 +11,7 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
 4. New font
 5. New menu (dropping from top)
 6. New search results template and cool new animation for search input
-7. Totally responsive (cover images included), menu icon floating the same way as logo does)
+7. Totally responsive (cover images included, menu icon floating the same way as logo does)
   * I really hope that Google PageSpeed Insights will be happy about it too
 8. All that fancy OpenGraph stuff for Twitter, Facebook, VK and all other social networks (already done in current child theme, need to just clean it up)
 9. “Load more” button (pagination sucks)
@@ -22,6 +22,6 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
 14. A little facelift for 404 template
 
 ## Development plan
-1. Make it all in just old plain HTML (I don't know shit about PHP anyway) until it looks at works to my linking
+1. Make it all in just old plain HTML (I don't know shit about PHP anyway) until it looks at works to my liking
 2. Make it responsive until it looks and works good on mobile too
 3. Transform it into Wordpress template
