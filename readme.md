@@ -30,4 +30,4 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
  3. Search results page
  4. 404
 2. Make it responsive until it looks and works good on mobile too
-3. Transform it into Wordpress template (I'll elaborate here once I'm done)
+3. Transform it into Wordpress template (I'll elaborate here once I'm done with first steps)
