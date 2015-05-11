@@ -6,7 +6,7 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
 
 ## Planned feature list
 1. Semi-resemblant of [current design](http://sequencebreak.ru)
-2. Lighning fast loading with clean code, proper structure and all that speed optimizations everyone won't shut up about (scoped CSS, responsive images)
+2. Lightning fast load speed with clean code, proper structure and all that speed optimizations everyone won't shut up about (scoped CSS, responsive images)
 3. New icons (fuck this FontAwesome, I don't need it for 4 icons)
 4. New font
 5. New menu (dropping from top)
