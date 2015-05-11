@@ -20,8 +20,14 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
 12. New footer design
 13. Custom RSS templates (already done in current child theme, just needs some cleaning)
 14. A little facelift for 404 template
+15. Full screen hero images for articles and proper stretching for index
+16. Video covers!
 
 ## Development plan
 1. Make it all in just old plain HTML (I don't know shit about PHP anyway) until it looks at works to my liking
+ 1. Index page
+ 2. Article page
+ 3. Search results page
+ 4. 404
 2. Make it responsive until it looks and works good on mobile too
-3. Transform it into Wordpress template
+3. Transform it into Wordpress template (I'll elaborate here once I'm done)
