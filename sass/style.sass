@@ -18,11 +18,14 @@
     -ms-animation: #{$str}
     animation: #{$str}
 
-// basic typography
+// basic typography and stuff
 h2
     font-size: 75px
     line-height: 85px
     margin-bottom: 20px
+
+button:focus
+    outline: 0
 
 // animations
 +keyframes(menu-button-hover)
@@ -98,4 +101,24 @@ article.post
         transform: translateY(-50%)
         text-align: center
         padding: 0 150px
+        
+#load-more-holder
+    height: 150px
+    
+    #load-more
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        text-align: center
+        border: 2px solid #000
+        margin: 0 auto
+        display: block
+        padding: 15px 95px
+        border-radius: 30px
+        transition: all 0.5s ease
+        cursor: pointer
+        
+        &:hover
+            background: #000
+            color: #fff
         

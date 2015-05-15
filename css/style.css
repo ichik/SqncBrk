@@ -160,6 +160,9 @@ h2 {
   line-height: 85px;
   margin-bottom: 20px; }
 
+button:focus {
+  outline: 0; }
+
 @-webkit-keyframes menu-button-hover {
   0% {
     opacity: 1;
@@ -249,3 +252,21 @@ article.post {
     transform: translateY(-50%);
     text-align: center;
     padding: 0 150px; }
+
+#load-more-holder {
+  height: 150px; }
+  #load-more-holder #load-more {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    border: 2px solid #000;
+    margin: 0 auto;
+    display: block;
+    padding: 15px 95px;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+    cursor: pointer; }
+    #load-more-holder #load-more:hover {
+      background: #000;
+      color: #fff; }
