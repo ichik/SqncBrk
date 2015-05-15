@@ -17,7 +17,7 @@ So, my happy hacking with [Ink child theme](https://github.com/ichik/Sequence-Br
 9. “Load more” button (pagination sucks)
 10. Improved typography (I have few ideas)
 11. New animations (less fancy, more stylish)
-~~12. New footer design~~
+12. ~~New footer design~~
 13. Custom RSS templates (already done in current child theme, just needs some cleaning)
 14. A little facelift for 404 template
 15. Full screen hero images for articles and proper stretching for index
