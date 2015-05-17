@@ -303,8 +303,14 @@ h1 {
   transform: rotate(-405deg);
   margin-top: -14px; }
 
+.morphsearch-form, #about-links {
+  display: inline-block; }
+  .morphsearch-form li, #about-links li {
+    display: inline-block;
+    margin-right: 20px; }
+
 .morphsearch-input {
-  width: 350px; }
+  width: 200px; }
   .morphsearch-input:focus {
     outline: 0; }
 
