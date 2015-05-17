@@ -7,8 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-    <h1>Sequence Break</h1>
-    <button class="menu-button" id="open-button"></button>
+	<h1>Sequence Break</h1>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+	<label for="nav-trigger" id="open-button">
+    	<div class="spinner diagonal part-1"></div>
+    	<div class="spinner horizontal"></div>
+    	<div class="spinner diagonal part-2"></div>
+    </label>
+    <div class="menu-wrap">
+    	<div class="hamburger-insides">
+			<form class="morphsearch-form">
+				<input class="morphsearch-input" type="search" placeholder="Поиск...">
+				<button class="morphsearch-submit" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
     <div id="primary" class="content-area">
         <article id="post-611" class="post-611 post">
         <style type="text/css" scoped>

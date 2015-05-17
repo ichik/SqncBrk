@@ -1,0 +1,6 @@
+{
+    "closeTags": {
+        "whenOpening": false,
+        "whenClosing": true
+    }
+}
