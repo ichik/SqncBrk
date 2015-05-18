@@ -116,7 +116,7 @@ h1
 .menu-wrap
 	position: fixed
 	height: 0px
-	background: #fff
+	background: rgba(255,255,255,0.9)
 	z-index: 999
 	width: 100%
 	box-shadow: rgba(0,0,0,0.8) 0 4px 10px
@@ -127,17 +127,11 @@ h1
 	
 .hamburger-insides
 	width: 740px
-	margin: 0 auto
-	position: relative
-	top: 50%
-	transform: translateY(-50%)
+	margin: 66px auto 0 auto
 	
 .nav-trigger
 	position: fixed
 	clip: rect(0,0,0,0)
-	
-.nav-trigger:checked ~ .content-area
-	top: 200px
 
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
