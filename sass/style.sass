@@ -122,7 +122,7 @@ h1
 	box-shadow: rgba(0,0,0,0.8) 0 4px 10px
 	top: 0
 	overflow: hidden
-	transition: height 0.2s
+	transition: height 0.5s
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1)
 	
 .hamburger-insides
@@ -136,8 +136,9 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
-	transition: height 0.2s
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+
+	&.open
+		height: 100vh
 	
 .nav-trigger:checked ~ #open-button > .horizontal
 	opacity: 0
@@ -158,8 +159,19 @@ h1
 		margin-right: 20px
 	
 // morphing search
-.morphsearch-input
+.morphsearch-form
 	width: 200px
+	height: 24px
+	transition: width 0.7s ease
+	position: relative
+	//border: 1px solid red
+	float: right
+
+.morphsearch-input
+	transition: font-size 0.3s ease-in
+	position: absolute
+	z-index: 1001
+	top: auto
 	
 	&:focus
 		outline: 0
@@ -167,6 +179,13 @@ h1
 		
 .morphsearch-submit
 	opacity: 0
+
+.open .morphsearch-form
+	width: 740px
+
+.open .morphsearch-input
+	font-size: 7em
+	padding-top: 1	00px
 
 // index
 article.post

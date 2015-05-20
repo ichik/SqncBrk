@@ -14,12 +14,8 @@
     	<div class="spinner horizontal"></div>
     	<div class="spinner diagonal part-2"></div>
     </label>
-    <div class="menu-wrap">
+    <div class="menu-wrap" id="morphSearch">
     	<div class="hamburger-insides">
-			<form class="morphsearch-form">
-				<input class="morphsearch-input" type="search" placeholder="Поиск...">
-				<button class="morphsearch-submit" type="submit">Search</button>
-			</form>
 			<nav id="about-links">
 				<ul>
 					<li><a href="#">О Sequence Break</a></li>
@@ -27,6 +23,10 @@
 					<li><a href="#">Supersecret link</a></li>
 				</ul>
 			</nav>
+			<form class="morphsearch-form">
+				<input class="morphsearch-input" type="search" placeholder="Поиск..." id="morphsearch-input">
+				<button class="morphsearch-submit" type="submit">Search</button>
+			</form>
 		</div>
 	</div>
     <div id="primary" class="content-area">
@@ -128,5 +128,37 @@
          <p><a href="http://ichikumer.ru" class="no-u">ichikumer.ru</a>&nbsp;•&nbsp;<a href="http://sequencebreak.ru/about/" class="no-u">О Sequence Break</a>&nbsp;•&nbsp;<a href="http://sequencebreak.ru/metroidvanias/" class="no-u">О метроидваниях</a></p>
          <p><nobr>Подписаться на обновления:&nbsp;&nbsp;<a href="http://feeds.feedburner.com/sequencebreak" class="no-u feed"></a>&nbsp;&nbsp;<a href="http://twitter.com/sqncbrk" class="no-u twitter"></a>&nbsp;&nbsp;<a href="http://facebook.com/sequencebreak"  class="no-u facebook"></a></nobr></p>
     </footer>
+<script>
+	(function() {
+		var morphSearch = document.getElementById( 'morphSearch' ),
+			input = morphSearch.querySelector( 'input.morphsearch-input' ),
+			ctrlClose = document.getElementById( 'open-button' );
+			// show/hide search area
+			addSearch = function(evt) {
+				morphSearch.className=morphSearch.className + " open";
+			};
+			removeSearch = function(evt) {
+				morphSearch.className=morphSearch.className.replace(" open", "");
+				input.blur();
+				if( input.value !== '' ) {
+					setTimeout(function() {
+						input.value = '';
+					}, 500);
+				}
+			};
+			// events
+			input.addEventListener( 'focus', addSearch );
+			input.addEventListener( 'blur', removeSearch );
+			ctrlClose.addEventListener( 'click', removeSearch );
+			// esc key closes search overlay
+			// keyboard navigation events
+			document.addEventListener( 'keydown', function( ev ) {
+				var keyCode = ev.keyCode || ev.which;
+				if( keyCode === 27) {
+					removeSearch(ev);
+				}
+			} );
+		})();
+</script>
 </body>
 </html>

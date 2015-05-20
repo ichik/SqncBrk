@@ -269,7 +269,7 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.8) 0 4px 10px;
   top: 0;
   overflow: hidden;
-  transition: height 0.2s;
+  transition: height 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
 
 .hamburger-insides {
@@ -282,9 +282,9 @@ h1 {
 
 .nav-trigger:checked ~ .menu-wrap {
   visibility: visible;
-  height: 160px;
-  transition: height 0.2s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+  height: 160px; }
+  .nav-trigger:checked ~ .menu-wrap.open {
+    height: 100vh; }
 
 .nav-trigger:checked ~ #open-button > .horizontal {
   opacity: 0; }
@@ -303,13 +303,30 @@ h1 {
     display: inline-block;
     margin-right: 20px; }
 
+.morphsearch-form {
+  width: 200px;
+  height: 24px;
+  transition: width 0.7s ease;
+  position: relative;
+  float: right; }
+
 .morphsearch-input {
-  width: 200px; }
+  transition: font-size 0.3s ease-in;
+  position: absolute;
+  z-index: 1001;
+  top: auto; }
   .morphsearch-input:focus {
     outline: 0; }
 
 .morphsearch-submit {
   opacity: 0; }
+
+.open .morphsearch-form {
+  width: 740px; }
+
+.open .morphsearch-input {
+  font-size: 7em;
+  padding-top: 1 0px; }
 
 article.post {
   height: 700px;
