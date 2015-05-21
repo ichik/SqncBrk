@@ -306,7 +306,7 @@ h1 {
 .morphsearch-form {
   width: 200px;
   height: 24px;
-  transition: width 0.7s ease;
+  transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
   position: relative;
   float: right; }
 
