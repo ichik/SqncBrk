@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 /*
  * Normalization
@@ -155,10 +156,63 @@ textarea {
     clip: rect(0 0 0 0) !important;
     position: absolute !important; } }
 /* All my styles go now */
+@font-face {
+  font-family: MuseoSans;
+  src: url("../fonts/MuseoSansCyrl_300Web.woff") format("woff"); }
+@font-face {
+  font-family: MuseoSansItalic;
+  src: url("../fonts/MuseoSansCyrl_300_ItalicWeb.woff") format("woff"); }
+@font-face {
+  font-family: Museo;
+  src: url("../fonts/MuseoCyrl_700Web.woff") format("woff"); }
+body {
+  font-family: MuseoSans; }
+
+h1, h2, h3 {
+  font-family: Museo; }
+
+blockquote {
+  font-family: MuseoSansItalic; }
+
 h2 {
-  font-size: 75px;
-  line-height: 85px;
-  margin-bottom: 20px; }
+  font-size: 80px;
+  line-height: 90px;
+  margin-bottom: 36px; }
+
+h3 {
+  font-size: 30px;
+  line-height: 54px; }
+
+p, blockquote, li {
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 36px; }
+  p.mark, blockquote.mark, li.mark {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: MuseoSansItalic; }
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding: 10px 0 10px 50px; }
+  blockquote:before {
+    display: block;
+    content: "“";
+    font-size: 80px;
+    margin-left: -40px;
+    color: #ccc;
+    float: left; }
+
+abbr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+  cursor: help; }
+
+.highlight {
+  background: #000; }
+  .highlight p, .highlight blockquote {
+    color: #fff; }
+  .highlight abbr {
+    border-color: rgba(255, 255, 255, 0.4); }
 
 button:focus {
   outline: 0; }
@@ -179,7 +233,7 @@ a, a:link {
     border-color: rgba(187, 51, 0, 0.2); }
 
 p {
-  margin-bottom: 20px; }
+  margin-bottom: 36px; }
 
 @-webkit-keyframes menu-button-hover {
   0% {
@@ -209,10 +263,75 @@ p {
   to {
     opacity: 0;
     transform: scale3d(1.2, 1.2, 1); } }
+@-webkit-keyframes hvr-pop {
+  50% {
+    transform: scale(1.3); } }
+@-moz-keyframes hvr-pop {
+  50% {
+    transform: scale(1.3); } }
+@-ms-keyframes hvr-pop {
+  50% {
+    transform: scale(1.3); } }
+@keyframes hvr-pop {
+  50% {
+    transform: scale(1.3); } }
+@-webkit-keyframes swing {
+  15% {
+    transform: translateY(5px); }
+  30% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(3px); }
+  65% {
+    transform: translateY(-3px); }
+  80% {
+    transform: translateY(2px); }
+  100% {
+    transform: translateY(0); } }
+@-moz-keyframes swing {
+  15% {
+    transform: translateY(5px); }
+  30% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(3px); }
+  65% {
+    transform: translateY(-3px); }
+  80% {
+    transform: translateY(2px); }
+  100% {
+    transform: translateY(0); } }
+@-ms-keyframes swing {
+  15% {
+    transform: translateY(5px); }
+  30% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(3px); }
+  65% {
+    transform: translateY(-3px); }
+  80% {
+    transform: translateY(2px); }
+  100% {
+    transform: translateY(0); } }
+@keyframes swing {
+  15% {
+    transform: translateY(5px); }
+  30% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(3px); }
+  65% {
+    transform: translateY(-3px); }
+  80% {
+    transform: translateY(2px); }
+  100% {
+    transform: translateY(0); } }
 h1 {
   font-size: 0;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" preserveAspectRatio="xMidYMid"><path fill-rule="evenodd" d="M100 200C44.772 200 0 155.228 0 100S44.772 0 100 0s100 44.772 100 100-44.772 100-100 100zm-8.322-65.212c.152-.038.304-.114.456-.19 1.064 2.28 3.268 3.306 5.775 3.306 3.15 0 6.82-1.678 9.46-4.563.37 2.2 1.54 4.57 4.59 4.57 2.16 0 4.18-1.59 5.77-3.83-.04 3 1.75 3.84 3.53 3.84 1.6 0 3.61-1.07 5.27-2.49l-.45 2.12c.45.31.91.38 1.59.38 1.37 0 2.81-.64 3.19-2.39l1.37-6.42.87-.23c.57 2.97 1.55 9.05 5.35 9.05 2.59 0 4.87-1.78 4.87-4.44 0-.65-.42-1.03-1.14-1.03-.31 1.29-.76 1.83-1.75 1.83-1.98 0-3-4.29-3.54-6.54 2.39-1.13 4.78-3.41 4.75-6.45 0-2.05-.61-2.85-2.13-2.85-1.33 0-2.47.72-2.97 1.75.42.46.53 1.29.53 2.35 0 2.28-1.26 3.69-3.69 4.41l-.76.19 3.11-14.55c.3-1.44-.46-2.09-1.83-2.09-2.05 0-4.79 1.83-4.79 2.7 0 .31.04.69.57 1.18.61-.72 1.33-.49 1.1.53l-3.76 17.92c-.96.8-2.33 1.5-3.54 1.5-.99 0-1.59-.68-1.14-2.81l2.66-12.58c-.45-.3-1.1-.49-1.78-.49-.95 0-1.94.34-2.59 1.1-.95-.83-2.207-1.25-3.917-1.25-5.14 0-9.33 6.27-9.55 12.73-1.76 1.96-4.91 3.61-7.43 3.61-1.75 0-3.155-.76-3.535-2.81 7.332-4.06 9.04-6.65 9.04-9.88 0-1.71-.88-3.64-4.33-3.64-6.27 0-9.54 7.9-9.54 12.84 0 .38.03.72.07 1.06-.8.34-1.56.53-2.43.42-.27 1.48 1.1 2.58 2.58 2.2zM68.496 110.13c3.116 0 4.597 1.254 4.597 4.18 0 3.077-2.355 6.914-5.47 7.864l2.203-10.296c-.456-.304-1.14-.494-1.824-.494-1.406 0-2.887.646-3.267 2.432l-4.332 20.44c-.608-.34-1.178-.72-1.747-1.215-1.064.35-1.52 1.14-1.52 1.98 0 1.75 3.495 2.89 7.675 2.89 7.26 0 12.28-6.23 12.28-10.83 0-2.7-1.75-4.82-5.73-4.82l-.04-.03c3.8-2.01 5.97-5.43 5.97-8.36 0-4.41-3.46-5.51-8.17-5.51-5.92 0-12.76 2.78-12.76 6.99 0 1.9 1.14 3.61 3.08 3.61.53 0 1.07-.11 1.64-.38-.46-.53-.76-1.21-.76-2.2 0-3.79 4.48-6.23 8.2-6.23zM44.328 62.744c-4.635 0-8.017 3.154-8.017 7.41 0 6.99 7.6 7.826 7.6 13.943 0 2.812-1.48 5.28-4.59 5.28-2.62 0-3.99-2.012-3.99-4.026 0-2.16 1.86-3.83 4.37-3 .19-.45.27-.83.27-1.21 0-1.44-1.25-2.35-2.51-2.35-3.95 0-6.04 3.08-6.04 6.31 0 3.54 2.47 7.22 7.75 7.22 5.7 0 10.03-3.46 10.03-9.35 0-6.53-7.94-8.05-7.94-13.49 0-2.43 1.22-4.59 3.58-4.59 1.6 0 2.32 1.18 2.32 2.43 0 1.26-.72 2.62-1.93 3 .42 1.07 1.6 1.52 2.21 1.52 1.94 0 3.08-1.74 3.08-3.72 0-2.51-1.82-5.36-6.15-5.36zm38.836 10.07c-.95 0-1.9.303-2.508 1.1-.95-.835-2.204-1.253-3.875-1.253-5.14 0-9.33 6.27-9.55 12.74-1.76 1.95-4.91 3.6-7.43 3.6-1.74 0-3.15-.76-3.53-2.81 7.34-4.06 9.05-6.65 9.05-9.88 0-1.71-.87-3.64-4.33-3.64-6.27 0-9.53 7.91-9.53 12.85 0 .38.04.72.08 1.07-.8.34-1.56.53-2.43.41-.26 1.49 1.11 2.59 2.59 2.21.15-.04.3-.11.46-.19 1.07 2.28 3.27 3.31 5.78 3.31 3.15 0 6.83-1.68 9.47-4.56.37 2.2 1.54 4.56 4.6 4.56 1.86 0 3.65-1.21 5.13-3.04l-3.5 16.57c.46.3 1.1.49 1.79.49 1.37 0 2.7-.64 3.08-2.39L85 73.34c-.453-.305-1.1-.495-1.783-.495zm.42 45.6c-1.596 0-2.964.797-4.256 1.823-.76.607-.494 1.785 0 2.09.342-.305.57-.457.76-.457.342 0 .494.342.38.95l-3.116 14.59c.456.304 1.102.494 1.786.494 1.368 0 2.812-.646 3.192-2.394l.455-2.317c1.938-8.777 3.724-10.487 4.978-10.487.798 0 1.178.418 1.178.95 0 .456-.15.95-.41 1.178.34.114.76.152 1.1.152 1.98 0 3.04-1.862 3.04-3.572 0-1.557-.95-3-2.77-3-1.74 0-3.38 1.063-4.9 4.14l.42-2.05c.31-1.445-.45-2.09-1.82-2.09zm80.37-45.753c-6.252 0-9.517 7.86-9.536 12.8-1.77 1.93-4.88 3.54-7.375 3.54-2.052 0-3.648-1.1-3.648-4.1 0-5.47 2.47-9.53 4.598-9.53.95 0 1.406.38 1.406 1.1 0 .54-.19 1.56-.61 2.47.42.38 1.02.54 1.52.54 1.4 0 2.66-.99 2.66-3.11 0-2.47-1.52-3.68-4.6-3.68-5.7 0-9.69 6.99-9.69 12.84 0 .56.05 1.08.12 1.56-.97.86-2.43 1.64-3.7 1.64-.76 0-1.26-.45-1.03-1.55l1.86-8.74c.87-3.98-.57-5.58-2.59-5.58-2.21 0-4.64 1.52-6.23 3.8l.38-1.71c.34-1.44-.46-2.09-1.83-2.09-1.6 0-2.97.8-4.26 1.83-.76.61-.5 1.79 0 2.09.34-.3.57-.45.76-.45.34 0 .53.34.38.95l-1.64 7.68c-1.63 2.15-5.12 4.09-7.85 4.09-1.75 0-3.16-.76-3.54-2.81 7.33-4.06 9.04-6.65 9.04-9.88 0-1.71-.88-3.64-4.33-3.64-6.27 0-9.54 7.91-9.54 12.84 0 .56.04 1.07.12 1.56-.97.85-2.43 1.63-3.7 1.63-.99 0-1.6-.68-1.14-2.81l2.66-12.58c-.46-.3-1.1-.49-1.79-.49-1.37 0-2.82.65-3.2 2.4l-2.23 10.7c-1.03 1.22-2.17 1.98-3.5 1.98-1.14 0-1.64-.684-1.29-2.242l2.32-10.79c.35-1.443-.45-2.09-1.82-2.09-1.59 0-2.96.8-4.25 1.825-.76.61-.49 1.787 0 2.09.34-.303.57-.455.76-.455.34 0 .53.342.38.95l-1.78 7.79c-.64 2.85-.64 7.294 3.57 7.294 2.17 0 4.03-1.825 5.55-4.294-.19 3.35 1.67 4.3 3.54 4.3 2 0 4.65-1.66 6.44-3.62 1.02 2.46 3.26 3.62 5.88 3.62 3.01 0 6.47-1.53 9.07-4.16l-.78 3.67c.46.31 1.1.5 1.79.5 1.37 0 2.82-.64 3.2-2.39l2.31-10.83c.84-1.02 2.36-1.97 3.39-1.97.84 0 1.37.65 1.03 2.25l-1.59 7.56c-.95 4.45 1.06 5.4 2.96 5.4 2.48 0 4.96-1.67 6.74-3.62 1.01 2.46 3.25 3.62 5.88 3.62 3.16 0 6.85-1.69 9.49-4.6.65 3.3 2.83 4.59 5.74 4.59 3.35 0 6.84-2.35 6.84-4.44 0-.64-.42-1.02-1.14-1.02-.64 1.37-1.86 2.16-3.53 2.16-1.64 0-2.93-.87-3.31-2.81 7.33-4.06 9.04-6.65 9.04-9.88 0-1.71-.88-3.64-4.33-3.64zm-4.827 11.9c.114-2.66 1.33-8.93 5.092-8.93.64 0 1.1.61 1.1 1.49 0 2.47-2.51 5.13-6.2 7.45zm-44.612-8.93c.646 0 1.102.61 1.102 1.49 0 2.47-2.508 5.13-6.194 7.45.114-2.66 1.33-8.93 5.092-8.93zM73.97 88.39c-1.18 0-2.053-.835-2.053-2.735 0-4.14 1.634-10.145 6.232-10.145.56 0 1.13.076 1.78.304l-2.17 10.22c-1.03 1.37-2.59 2.357-3.8 2.357zM61.24 75.625c.645 0 1.1.608 1.1 1.482 0 2.47-2.507 5.13-6.193 7.447.114-2.66 1.33-8.93 5.092-8.93zm10.98 51.642c0 4.065-3.496 8.206-7.41 8.206h-.037l2.43-11.36c.61-.152 1.18-.228 1.71-.228 2.243 0 3.307 1.406 3.307 3.382zm29.033-6.042c.646 0 1.102.608 1.102 1.482 0 2.47-2.508 5.13-6.193 7.447.114-2.66 1.33-8.93 5.09-8.93zm16.91-.114c.57 0 1.14.08 1.786.31l-2.13 10.19c-1.03 1.41-2.62 2.4-3.84 2.4-1.18 0-2.05-.83-2.05-2.73 0-4.14 1.63-10.14 6.23-10.14z" fill="#fff"/></svg>');
   background-size: 100px 100px;
+  background-origin: border-box;
   mix-blend-mode: exclusion;
   width: 100px;
   height: 100px;
@@ -220,6 +339,15 @@ h1 {
   left: 30px;
   top: 30px;
   z-index: 10000; }
+
+#backtoindex:hover h1 {
+  -webkit-animation: hvr-pop;
+  -moz-animation: hvr-pop;
+  -ms-animation: hvr-pop;
+  animation: hvr-pop;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1; }
 
 #open-button {
   position: fixed;
@@ -263,14 +391,13 @@ h1 {
 .menu-wrap {
   position: fixed;
   height: 0px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   z-index: 999;
   width: 100%;
-  box-shadow: rgba(90, 90, 90, 0.4) 0 4px 10px;
+  box-shadow: rgba(90, 90, 90, 0.2) 0 1px 7px 0;
   top: 0;
   overflow: hidden;
-  transition: height 0.5s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+  transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear; }
 
 .hamburger-insides {
   width: 740px;
@@ -284,7 +411,8 @@ h1 {
   visibility: visible;
   height: 160px; }
   .nav-trigger:checked ~ .menu-wrap.open {
-    height: 100vh; }
+    height: 100vh;
+    background: white; }
 
 .nav-trigger:checked ~ #open-button > .horizontal {
   opacity: 0; }
@@ -304,15 +432,15 @@ h1 {
     margin-right: 20px; }
 
 .morphsearch-form {
-  width: 200px;
+  width: 150px;
   height: 24px;
   transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
-  position: relative;
+  font-size: 20px;
+  line-height: 36px;
   float: right; }
 
 .morphsearch-input {
-  transition: font-size 0.3s ease-in;
-  position: absolute;
+  transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
   z-index: 1001;
   top: auto; }
   .morphsearch-input:focus {
@@ -325,8 +453,10 @@ h1 {
   width: 740px; }
 
 .open .morphsearch-input {
-  font-size: 7em;
-  padding-top: 1 0px; }
+  font-size: 120px;
+  line-height: 216px;
+  padding-top: 100px;
+  width: 740px; }
 
 article.post {
   height: 700px;
@@ -336,19 +466,27 @@ article.post {
   margin-bottom: 5px; }
   article.post a {
     width: 100%;
+    position: absolute;
+    top: 0;
     height: 100%;
     display: block;
-    color: #fff;
-    opacity: 0.7;
-    transition: opacity 0.35s; }
-    article.post a:hover {
+    color: #fff; }
+    article.post a:hover .post-cover {
       opacity: 1; }
-  article.post .post-content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 0 150px; }
+
+.post-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 0 150px; }
+
+.post-cover {
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s;
+  position: absolute; }
 
 #load-more-holder {
   height: 150px; }
@@ -368,8 +506,60 @@ article.post {
       background: #000;
       color: #fff; }
 
+.article-cover {
+  width: 100%;
+  height: 100vh;
+  background: #000; }
+  .article-cover .post-content {
+    color: #fff; }
+
+#scroll-to-content {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  padding-bottom: 20px;
+  bottom: 0;
+  left: 0;
+  cursor: pointer; }
+  #scroll-to-content #arrow {
+    margin: 0 auto;
+    width: 26px; }
+    #scroll-to-content #arrow .inner {
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+      width: 26px;
+      height: 26px;
+      margin-top: -26px; }
+  #scroll-to-content:hover #arrow {
+    -webkit-animation: swing;
+    -moz-animation: swing;
+    -ms-animation: swing;
+    animation: swing;
+    animation-duration: 1s;
+    animation-timing-function: ease; }
+
+#primary #platforms, #primary p, #primary blockquote, #primary h3 {
+  width: 740px;
+  margin: 0 auto 36px auto; }
+
+#primary h3 {
+  margin-top: 72px;
+  margin-bottom: 9px; }
+
+.article-area {
+  padding-top: 100px; }
+
+#platforms li {
+  color: #f0ad2c;
+  border: 1px solid #f0ad2c;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px 10px 10px 0; }
+
 #page-footer {
-  height: 100px; }
+  height: 100px;
+  margin-top: 100px; }
   #page-footer p {
     width: 740px;
     margin: 0 auto;
