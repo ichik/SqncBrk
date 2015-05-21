@@ -123,19 +123,13 @@ p
 	50%
 		transform: scale(1.3)
 
-+keyframes(swing)
-	15%
-		transform: translateY(5px)
-	30%
-		transform: translateY(-5px)
-	50%
-		transform: translateY(3px)
-	65%
-		transform: translateY(-3px)
-	80%
-		transform: translateY(2px)
++keyframes(scroll)
+	0%
+		opacity: 1
+		transform: translateY(0px)
 	100%
-		transform: translateY(0)
+		opacity: 0
+		transform: translateY(10px)
 
 // logo
 h1
@@ -344,26 +338,22 @@ article.post
 	height: 40px
 	position: absolute
 	padding-bottom: 20px
-	bottom: 0
+	bottom: 40px
 	left: 0
-	cursor: pointer
-	
-	#arrow
-		margin: 0 auto
-		width: 26px
+	border: 0
+	text-align: center
+	color: #fff
 
-		.inner
-			border-right: 2px solid #fff
-			border-bottom: 2px solid #fff
-			transform: rotate(45deg)
-			width: 26px
-			height: 26px
-			margin-top: -26px
-	
-	&:hover #arrow
-		+animation(swing)
-		animation-duration: 1s
-		animation-timing-function: ease
+	.mouse
+		border: 2px solid #fff
+		border-radius: 12px
+		width: 26px
+		height: 40px
+		margin: 0 auto
+
+	p
+		font-size: $basefontsize * 0.7
+		+animation(scroll 2s infinite)
 
 #primary #platforms,#primary p,#primary blockquote,#primary h3
 	width: 740px
@@ -373,8 +363,8 @@ article.post
 	margin-top: $baselineheight * 2
 	margin-bottom: $baselineheight / 4
 
-.article-area
-	padding-top: 100px
+#primary.article-area
+	padding-top: $baselineheight
 
 #platforms li
 	color: #f0ad2c
