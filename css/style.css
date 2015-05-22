@@ -545,6 +545,19 @@ blockquote {
   #primary blockquote p:last-of-type {
     margin: 0 auto; }
 
+body.error404 {
+  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000;
+  min-height: 100vh;
+  overflow: hidden; }
+  body.error404 #primary {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    position: absolute; }
+  body.error404 h2 {
+    color: #fff;
+    text-align: center; }
+
 #page-footer {
   height: 100px;
   margin-top: 100px; }
