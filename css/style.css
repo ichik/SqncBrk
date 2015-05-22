@@ -192,17 +192,6 @@ p, blockquote, li {
     line-height: 18px;
     font-family: MuseoSansItalic; }
 
-blockquote {
-  border-left: 4px solid #ccc;
-  padding: 10px 0 10px 50px; }
-  blockquote:before {
-    display: block;
-    content: "“";
-    font-size: 80px;
-    margin-left: -40px;
-    color: #ccc;
-    float: left; }
-
 abbr {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
   cursor: help; }
@@ -236,9 +225,6 @@ a, a:link {
     color: #bb3300;
     border-color: #cc663f;
     border-color: rgba(187, 51, 0, 0.2); }
-
-p {
-  margin-bottom: 36px; }
 
 @-webkit-keyframes menu-button-hover {
   0% {
@@ -534,6 +520,19 @@ article.post {
   padding: 5px 10px;
   display: inline-block;
   margin: 10px 10px 10px 0; }
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding: 10px 0 10px 50px; }
+  blockquote:before {
+    display: block;
+    content: "“";
+    font-size: 80px;
+    margin-left: -40px;
+    color: #ccc;
+    float: left; }
+  #primary blockquote p:last-of-type {
+    margin: 0 auto; }
 
 #page-footer {
   height: 100px;

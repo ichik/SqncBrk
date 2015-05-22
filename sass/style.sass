@@ -62,18 +62,6 @@ p,blockquote,li
 		line-height: $baselineheight * 0.5
 		font-family: MuseoSansItalic
 
-blockquote
-	border-left: 4px solid #ccc
-	padding: 10px 0 10px 50px
-
-	&:before
-		display: block
-		content: "\201C"
-		font-size: 80px
-		margin-left: -40px
-		color: #ccc
-		float: left
-
 abbr
 	border-bottom: 1px dotted rgba(0,0,0,0.4)
 	cursor: help
@@ -112,9 +100,6 @@ a,a:link
 		color: #bb3300
 		border-color: #cc663f
 		border-color: rgba(187,51,0,0.2)
-
-p
-	margin-bottom: $baselineheight
 	
 // animations
 +keyframes(menu-button-hover)
@@ -378,6 +363,21 @@ article.post
 	padding: 5px 10px
 	display: inline-block
 	margin: 10px 10px 10px 0
+
+blockquote
+	border-left: 4px solid #ccc
+	padding: 10px 0 10px 50px
+
+	&:before
+		display: block
+		content: "\201C"
+		font-size: 80px
+		margin-left: -40px
+		color: #ccc
+		float: left
+
+	#primary & p:last-of-type
+		margin: 0 auto
 			
 //footer		
 #page-footer
