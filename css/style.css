@@ -208,11 +208,16 @@ abbr {
   cursor: help; }
 
 .highlight {
-  background: #000; }
+  background: #000;
+  margin-bottom: 36px; }
   .highlight p, .highlight blockquote {
     color: #fff; }
   .highlight abbr {
     border-color: rgba(255, 255, 255, 0.4); }
+  .highlight img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block; }
 
 button:focus {
   outline: 0; }
