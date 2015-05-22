@@ -478,7 +478,13 @@ article.post {
   height: 100vh;
   background: #000; }
   .article-cover .post-content {
-    color: #fff; }
+    color: #fff;
+    z-index: 200; }
+  .article-cover video {
+    position: absolute;
+    z-index: 100;
+    min-width: 100%;
+    min-height: 100%; }
 
 #scroll-to-content {
   width: 100%;
@@ -489,7 +495,8 @@ article.post {
   left: 0;
   border: 0;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  z-index: 200; }
   #scroll-to-content .mouse {
     border: 2px solid #fff;
     border-radius: 12px;
