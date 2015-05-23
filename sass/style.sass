@@ -235,14 +235,12 @@ h1
 	width: 150px
 	height: 24px
 	transition: width 0.7s cubic-bezier(0.7,0,0.3,1)
-	//position: relative
 	font-size: $basefontsize
 	line-height: $baselineheight
 	float: right
 
 .morphsearch-input
 	transition: font-size 0.3s ease-in, line-height 0.3s ease-in
-	//position: absolute
 	z-index: 1001
 	top: auto
 	
@@ -250,15 +248,31 @@ h1
 		outline: 0
 		
 		
-.morphsearch-submit
+.morphsearch-submit,.search-submit
 	opacity: 0
 
-.open .morphsearch-form
+.open .morphsearch-form,.search-form
 	width: 740px
 
 .open .morphsearch-input
-	font-size: $basefontsize * 6
-	line-height: $baselineheight * 6
+	font-size: $basefontsize * 5
+	line-height: $baselineheight * 5
+	padding-top: 100px
+	width: 740px
+
+.search-form
+	@extend .morphsearch-form
+	display: block
+	margin: 0 auto
+	position: relative
+	height: auto
+	clear: both
+	float: none
+	
+.search-input
+	@extend .morphsearch-input
+	font-size: $basefontsize * 5
+	line-height: $baselineheight * 5
 	padding-top: 100px
 	width: 740px
 

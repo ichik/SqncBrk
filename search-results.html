@@ -2,8 +2,55 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Search Request | Результаты поиска | Sequence Break</title>
+	<title>Dark Souls | Результаты поиска | Sequence Break</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/sequencebreak" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@sqncbrk">
+	<meta name="twitter:title" content="Sequence Break">
+	<meta name="twitter:creator" content="@ichikumer">
+	<meta name="twitter:image:src" content="http://sequencebreak.ru/wp-content/uploads/2014/05/sequencebreak-cover.png">
+	<meta name="twitter:domain" content="SequenceBreak.ru">
+	<meta name="twitter:description" content="Персональный блог @ichikumer о видеоиграх жанра «метроидвания»">
+	<meta property="og:title" content="Sequence Break" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://sequencebreak.ru/wp-content/uploads/2014/05/sequencebreak-cover.png" />
+	<meta property="og:url" content="http://sequencebreak.ru" />
+	<meta property="og:description" content="Персональный блог @ichikumer о видеоиграх жанра «метроидвания»" />
+	<meta property="og:site_name" content="SequenceBreak.ru" />
 </head>
-<body>
+<body class="open">
+	<a href="#" id="backtoindex"><h1>Sequence Break</h1></a>
+	<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+	<label for="nav-trigger" id="open-button">
+    	<div class="spinner diagonal part-1"></div>
+    	<div class="spinner horizontal"></div>
+    	<div class="spinner diagonal part-2"></div>
+    </label>
+    <div class="menu-wrap">
+    	<div class="hamburger-insides">
+			<nav id="about-links">
+				<ul>
+					<li><a href="#">О Sequence Break</a></li>
+					<li><a href="#">О метроидваниях</a></li>
+					<li><a href="#">Supersecret link</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<form class="search-form">
+		<input class="search-input" type="search" placeholder="Поиск..." id="search-input" autocomplete="off" value="Dark Souls" autofocus onfocus="this.value = this.value;">
+		<button class="search-submit" type="submit">Search</button>
+	</form>
+	<div id="primary" class="search-results">
+		
+	</div>
+    <footer id="page-footer">
+         <p><a href="http://ichikumer.ru" class="no-u">ichikumer.ru</a>&nbsp;•&nbsp;<a href="http://sequencebreak.ru/about/" class="no-u">О Sequence Break</a>&nbsp;•&nbsp;<a href="http://sequencebreak.ru/metroidvanias/" class="no-u">О метроидваниях</a></p>
+         <p><nobr>Подписаться на обновления:&nbsp;&nbsp;<a href="http://feeds.feedburner.com/sequencebreak" class="no-u feed"></a>&nbsp;&nbsp;<a href="http://twitter.com/sqncbrk" class="no-u twitter"></a>&nbsp;&nbsp;<a href="http://facebook.com/sequencebreak"  class="no-u facebook"></a></nobr></p>
+    </footer>
+	<!--<script language="javascript" src="js/morphsearch.js"></script>-->
 </body>
 </html>
