@@ -528,7 +528,7 @@ article.post {
     -ms-animation: scroll 2s infinite;
     animation: scroll 2s infinite; }
 
-#primary #platforms, #primary p, #primary blockquote, #primary h3 {
+#primary #platforms, #primary p, #primary blockquote, #primary h3, #primary .search-link {
   width: 740px;
   margin: 0 auto 36px auto; }
 
@@ -571,6 +571,23 @@ body.error404 {
   body.error404 h2 {
     color: #fff;
     text-align: center; }
+
+a.search-link {
+  display: block;
+  border: 0;
+  color: #000; }
+  #primary a.search-link h3 {
+    margin-bottom: 0; }
+  a.search-link img {
+    margin-right: 36px;
+    margin-bottom: 18px; }
+  a.search-link time {
+    color: #888;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 18px; }
+  #primary a.search-link:hover h3 {
+    color: #bb3300; }
 
 #page-footer {
   height: 100px;

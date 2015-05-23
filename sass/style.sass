@@ -372,7 +372,7 @@ article.post
 		font-size: $basefontsize * 0.7
 		+animation(scroll 2s infinite)
 
-#primary #platforms,#primary p,#primary blockquote,#primary h3
+#primary #platforms,#primary p,#primary blockquote,#primary h3,#primary .search-link
 	width: 740px
 	margin: 0 auto $baselineheight auto
 
@@ -420,6 +420,28 @@ body.error404
 	h2
 		color: #fff
 		text-align: center
+
+//search
+a.search-link
+	display: block
+	border: 0
+	color: #000
+
+	#primary & h3
+		margin-bottom: 0
+
+	img
+		margin-right: $baselineheight
+		margin-bottom: $baselineheight / 2
+	
+	time
+		color: #888
+		font-size: $basefontsize * 0.7
+		display: block
+		margin-bottom: $baselineheight / 2
+
+	#primary &:hover h3
+		color: #bb3300
 			
 //footer		
 #page-footer
