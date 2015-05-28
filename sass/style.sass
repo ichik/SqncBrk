@@ -21,6 +21,7 @@
 // basic typography and stuff
 $basefontsize: 20px
 $baselineheight: 36px
+$mainwidth: 740px
 
 @font-face
 	font-family: MuseoSans
@@ -197,7 +198,7 @@ h1
 	transition: height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear
 	
 .hamburger-insides
-	width: 740px
+	width: $mainwidth
 	margin: 66px auto 0 auto
 	
 .nav-trigger
@@ -252,13 +253,13 @@ h1
 	opacity: 0
 
 .open .morphsearch-form,.search-form
-	width: 740px
+	width: $mainwidth
 
 .open .morphsearch-input
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
 	padding-top: 100px
-	width: 740px
+	width: $mainwidth
 
 .search-form
 	@extend .morphsearch-form
@@ -274,7 +275,7 @@ h1
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
 	padding-top: 100px
-	width: 740px
+	width: $mainwidth
 
 // index
 article.post
@@ -373,7 +374,7 @@ article.post
 		+animation(scroll 2s infinite)
 
 #primary #platforms,#primary p,#primary blockquote,#primary h3,#primary .search-link
-	width: 740px
+	width: $mainwidth
 	margin: 0 auto $baselineheight auto
 
 #primary h3
@@ -449,7 +450,7 @@ a.search-link
 	margin-top: 100px
 	
 	p
-		width: 740px
+		width: $mainwidth
 		margin: 0 auto
 		font-size: 13px
 		line-height: 30px
