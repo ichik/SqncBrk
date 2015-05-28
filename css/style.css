@@ -168,6 +168,9 @@ textarea {
 body {
   font-family: MuseoSans; }
 
+::selection {
+  background: #f0ad2c; }
+
 h1, h2, h3 {
   font-family: Museo; }
 
@@ -178,6 +181,14 @@ h2 {
   font-size: 80px;
   line-height: 90px;
   margin-bottom: 36px; }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    h2 {
+      font-size: 60px;
+      line-height: 72px; } }
+  @media (max-width: 760px) {
+    h2 {
+      font-size: 30px;
+      line-height: 43.2px; } }
 
 h3 {
   font-size: 30px;
@@ -445,6 +456,12 @@ article.post {
   position: relative;
   background-color: #000;
   margin-bottom: 5px; }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    article.post {
+      height: 400px; } }
+  @media (max-width: 760px) {
+    article.post {
+      height: 400px; } }
   article.post a {
     width: 100%;
     position: absolute;

@@ -1,7 +1,19 @@
 @import '../vendors/sanitize'
 /* All my styles go now */
 
-// vendor mixins
+//variables
+$basefontsize: 20px
+$baselineheight: 36px
+$mainwidth: 740px
+$yellow: #f0ad2c
+$white: #fff
+$black: #000
+$tablet-width: 760px
+$desktop-width: 1020px
+$mobile-width: 320px
+
+
+// mixins
 =keyframes($name)
 	@-webkit-keyframes #{$name}
 		@content
@@ -18,11 +30,17 @@
 	-ms-animation: #{$str}
 	animation: #{$str}
 
-// basic typography and stuff
-$basefontsize: 20px
-$baselineheight: 36px
-$mainwidth: 740px
+=tablet
+	@media (min-width: $tablet-width) and (max-width: $desktop-width)
+		@content
 
+=mobile
+	@media (max-width: $tablet-width)
+		@content
+
+
+
+// basic typography and stuff
 @font-face
 	font-family: MuseoSans
 	src: url("../fonts/MuseoSansCyrl_300Web.woff") format("woff")
@@ -38,6 +56,9 @@ $mainwidth: 740px
 body
 	font-family: MuseoSans
 
+::selection
+	background: $yellow
+
 h1,h2,h3
 	font-family: Museo
 
@@ -48,6 +69,14 @@ h2
 	font-size: $basefontsize * 4
 	line-height: $baselineheight * 2.5
 	margin-bottom: $baselineheight
+
+	+tablet
+		font-size: $basefontsize * 3
+		line-height: $baselineheight * 2
+
+	+mobile
+		font-size: $basefontsize * 1.5
+		line-height: $baselineheight * 1.2
 
 h3
 	font-size: $basefontsize * 1.5
@@ -68,11 +97,11 @@ abbr
 	cursor: help
 
 .highlight
-	background: #000
+	background: $black
 	margin-bottom: $baselineheight
 	
 	p,blockquote
-		color: #fff
+		color: $white
 	
 	abbr
 		border-color: rgba(255,255,255,0.4)
@@ -174,7 +203,7 @@ h1
 	.spinner
 		width: 30px
 		height: 2px
-		background-color: #fff
+		background-color: $white
 		margin-bottom: 5px
 		border-radius: 2px
 		transition: all 0.3s
@@ -282,16 +311,22 @@ article.post
 	height: 700px
 	width: 100%
 	position: relative
-	background-color: #000
+	background-color: $black
 	margin-bottom: 5px
-	
+
+	+tablet
+		height: 400px
+
+	+mobile
+		height: 400px
+
 	a
 		width: 100%
 		position: absolute
 		top: 0
 		height: 100%
 		display: block
-		color: #fff
+		color: $white
 		
 		&:hover .post-cover
 			opacity: 1
@@ -318,7 +353,7 @@ article.post
 		top: 50%
 		transform: translateY(-50%)
 		text-align: center
-		border: 2px solid #000
+		border: 2px solid $black
 		margin: 0 auto
 		display: block
 		padding: 15px 95px
@@ -327,17 +362,17 @@ article.post
 		cursor: pointer
 		
 		&:hover
-			background: #000
-			color: #fff
+			background: $black
+			color: $white
 
 //article
 .article-cover
 	width: 100%
 	height: 100vh
-	background: #000
+	background: $black
 	
 	.post-content
-		color: #fff
+		color: $white
 		z-index: 200
 	
 	video
@@ -359,11 +394,11 @@ article.post
 	left: 0
 	border: 0
 	text-align: center
-	color: #fff
+	color: $white
 	z-index: 200
 
 	.mouse
-		border: 2px solid #fff
+		border: 2px solid $white
 		border-radius: 12px
 		width: 26px
 		height: 40px
@@ -385,8 +420,8 @@ article.post
 	padding-top: $baselineheight
 
 #platforms li
-	color: #f0ad2c
-	border: 1px solid #f0ad2c
+	color: $yellow
+	border: 1px solid $yellow
 	padding: 5px 10px
 	display: inline-block
 	margin: 10px 10px 10px 0
@@ -408,7 +443,7 @@ blockquote
 
 //404
 body.error404
-	background: url("../images/CaveStory.gif") 50% 100% no-repeat #000
+	background: url("../images/CaveStory.gif") 50% 100% no-repeat $black
 	min-height: 100vh
 	overflow: hidden
 
@@ -419,14 +454,14 @@ body.error404
 		position: absolute
 
 	h2
-		color: #fff
+		color: $white
 		text-align: center
 
 //search
 a.search-link
 	display: block
 	border: 0
-	color: #000
+	color: $black
 
 	#primary & h3
 		margin-bottom: 0
