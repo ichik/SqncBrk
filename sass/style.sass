@@ -187,6 +187,7 @@ h1
 		background-size: 75px 75px
 		position: absolute
 		left: 20px
+		top: 40px
 
 #backtoindex:hover h1
 	+animation(hvr-pop)
@@ -272,7 +273,7 @@ h1
 		position: relative
 
 	+mobile
-		margin: 0 auto
+		width: auto
 	
 .nav-trigger
 	position: fixed
@@ -298,6 +299,13 @@ h1
 	
 .morphsearch-form,#about-links
 	display: inline-block
+	transition: transform 0.3s ease-out
+
+	+mobile
+		display: block
+		width: 220px
+		margin: 0 auto
+		padding-left: 30px
 	
 	li
 		display: inline-block
@@ -308,6 +316,7 @@ h1
 
 		+mobile
 			display: block
+			font-size: $basefontsize
 	
 // morphing search
 .morphsearch-form
@@ -318,8 +327,12 @@ h1
 	line-height: $baselineheight
 	float: right
 
+	+mobile
+		width: 220px
+		float: none
+
 .morphsearch-input
-	transition: font-size 0.3s ease-in, line-height 0.3s ease-in
+	transition: font-size 0.3s ease-in, line-height 0.3s ease-in, transform 0.3s ease-in
 	z-index: 1001
 	top: auto
 	
@@ -336,11 +349,25 @@ h1
 .open .morphsearch-form,.search-form
 	width: $mainwidth
 
+	+mobile
+		width: 220px
+
 .open .morphsearch-input
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
 	padding-top: 100px
 	width: $mainwidth
+
+	+mobile
+		font-size: $basefontsize * 2
+		line-height: $baselineheight
+		width: 220px
+		padding-top: 0
+		transform: translateY(-200px)
+
+.open #about-links
+	+mobile
+		transform: translateY(-220px)
 
 .search-form
 	@extend .morphsearch-form
