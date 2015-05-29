@@ -418,6 +418,10 @@ h1 {
       width: 200px;
       position: relative;
       margin: 140px auto 0 auto; } }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    .hamburger-insides {
+      margin: 66px 0 0 150px;
+      width: 720px; } }
 
 .nav-trigger {
   position: fixed;
