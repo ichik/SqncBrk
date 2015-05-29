@@ -82,6 +82,10 @@ h3
 	font-size: $basefontsize * 1.5
 	line-height: $baselineheight * 1.5
 
+	+mobile
+		font-size: $basefontsize * 1.2
+		line-height: $baselineheight
+
 p,blockquote,li
 	font-size: $basefontsize
 	line-height: $baselineheight
@@ -91,6 +95,13 @@ p,blockquote,li
 		font-size: $basefontsize * 0.7
 		line-height: $baselineheight * 0.5
 		font-family: MuseoSansItalic
+
+		+mobile
+			font-size: $basefontsize * 0.6
+
+	+mobile
+		font-size: $basefontsize * 0.8
+		line-height: $baselineheight * 0.7
 
 abbr
 	border-bottom: 1px dotted rgba(0,0,0,0.4)
@@ -168,6 +179,9 @@ h1
 
 	+mobile
 		position: absolute
+		width: 75px
+		height: 75px
+		background-size: 75px 75px
 
 #backtoindex:hover h1
 	+animation(hvr-pop)
@@ -189,6 +203,7 @@ h1
 
 	+mobile
 		position: absolute
+		top: 50px
 	
 	&:after
 		position: absolute
@@ -231,10 +246,18 @@ h1
 	top: 0
 	overflow: hidden
 	transition: height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear
+
+	+mobile
+		position: absolute
 	
 .hamburger-insides
 	width: $mainwidth
 	margin: 66px auto 0 auto
+
+	+mobile
+		width: 200px
+		position: relative
+		margin: 140px auto 0 auto
 	
 .nav-trigger
 	position: fixed
@@ -243,6 +266,9 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
+
+	+mobile
+		height: 100vh
 
 	&.open
 		height: 100vh
@@ -265,6 +291,11 @@ h1
 	li
 		display: inline-block
 		margin-right: 20px
+
+		+mobile
+			display: block
+			margin-right: 0
+			margin-bottom: 20px
 	
 // morphing search
 .morphsearch-form
@@ -274,6 +305,9 @@ h1
 	font-size: $basefontsize
 	line-height: $baselineheight
 	float: right
+
+	+mobile
+		float: none
 
 .morphsearch-input
 	transition: font-size 0.3s ease-in, line-height 0.3s ease-in
@@ -295,6 +329,12 @@ h1
 	line-height: $baselineheight * 5
 	padding-top: 100px
 	width: $mainwidth
+
+	+mobile
+		padding-top: 0
+		font-size: $basefontsize * 2
+		line-height: $baselineheight
+		width: 240px
 
 .search-form
 	@extend .morphsearch-form
@@ -321,7 +361,7 @@ article.post
 	margin-bottom: 5px
 
 	+tablet
-		height: 400px
+		height: 500px
 
 	+mobile
 		height: 400px
@@ -421,6 +461,10 @@ article.post
 	width: $mainwidth
 	margin: 0 auto $baselineheight auto
 
+	+mobile
+		width: 100%
+		padding: 0 10px
+
 #primary h3
 	margin-top: $baselineheight * 2
 	margin-bottom: $baselineheight / 4
@@ -446,6 +490,10 @@ blockquote
 		margin-left: -40px
 		color: #ccc
 		float: left
+
+		+mobile
+			font-size: $basefontsize * 2
+			margin-left: -10px
 
 	#primary & p:last-of-type
 		margin: 0 auto
@@ -492,12 +540,19 @@ a.search-link
 #page-footer
 	height: 100px
 	margin-top: 100px
+
+	+mobile
+		margin-top: 20px
 	
 	p
 		width: $mainwidth
 		margin: 0 auto
 		font-size: 13px
 		line-height: 30px
+
+		+mobile
+			width: auto
+			padding: 0 10px
 		
 		a
 			border-bottom: 0

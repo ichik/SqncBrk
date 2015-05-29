@@ -193,6 +193,10 @@ h2 {
 h3 {
   font-size: 30px;
   line-height: 54px; }
+  @media (max-width: 760px) {
+    h3 {
+      font-size: 24px;
+      line-height: 36px; } }
 
 p, blockquote, li {
   font-size: 20px;
@@ -202,6 +206,13 @@ p, blockquote, li {
     font-size: 14px;
     line-height: 18px;
     font-family: MuseoSansItalic; }
+    @media (max-width: 760px) {
+      p.mark, blockquote.mark, li.mark {
+        font-size: 12px; } }
+  @media (max-width: 760px) {
+    p, blockquote, li {
+      font-size: 16px;
+      line-height: 25.2px; } }
 
 abbr {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
@@ -319,7 +330,10 @@ h1 {
   z-index: 10000; }
   @media (max-width: 760px) {
     h1 {
-      position: absolute; } }
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      background-size: 75px 75px; } }
 
 #backtoindex:hover h1 {
   -webkit-animation: hvr-pop;
@@ -341,7 +355,8 @@ h1 {
   mix-blend-mode: exclusion; }
   @media (max-width: 760px) {
     #open-button {
-      position: absolute; } }
+      position: absolute;
+      top: 50px; } }
   #open-button:after {
     position: absolute;
     top: 50%;
@@ -382,10 +397,18 @@ h1 {
   top: 0;
   overflow: hidden;
   transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear; }
+  @media (max-width: 760px) {
+    .menu-wrap {
+      position: absolute; } }
 
 .hamburger-insides {
   width: 740px;
   margin: 66px auto 0 auto; }
+  @media (max-width: 760px) {
+    .hamburger-insides {
+      width: 200px;
+      position: relative;
+      margin: 140px auto 0 auto; } }
 
 .nav-trigger {
   position: fixed;
@@ -394,6 +417,9 @@ h1 {
 .nav-trigger:checked ~ .menu-wrap {
   visibility: visible;
   height: 160px; }
+  @media (max-width: 760px) {
+    .nav-trigger:checked ~ .menu-wrap {
+      height: 100vh; } }
   .nav-trigger:checked ~ .menu-wrap.open {
     height: 100vh;
     background: white; }
@@ -414,6 +440,11 @@ h1 {
   .morphsearch-form li, .search-form li, #about-links li {
     display: inline-block;
     margin-right: 20px; }
+    @media (max-width: 760px) {
+      .morphsearch-form li, .search-form li, #about-links li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px; } }
 
 .morphsearch-form, .search-form {
   width: 150px;
@@ -422,6 +453,9 @@ h1 {
   font-size: 20px;
   line-height: 36px;
   float: right; }
+  @media (max-width: 760px) {
+    .morphsearch-form, .search-form {
+      float: none; } }
 
 .morphsearch-input, .search-input {
   transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
@@ -441,6 +475,12 @@ h1 {
   line-height: 180px;
   padding-top: 100px;
   width: 740px; }
+  @media (max-width: 760px) {
+    .open .morphsearch-input, .open .search-input {
+      padding-top: 0;
+      font-size: 40px;
+      line-height: 36px;
+      width: 240px; } }
 
 .search-form {
   display: block;
@@ -464,7 +504,7 @@ article.post {
   margin-bottom: 5px; }
   @media (min-width: 760px) and (max-width: 1020px) {
     article.post {
-      height: 400px; } }
+      height: 500px; } }
   @media (max-width: 760px) {
     article.post {
       height: 400px; } }
@@ -557,6 +597,10 @@ article.post {
 #primary #platforms, #primary p, #primary blockquote, #primary h3, #primary .search-link {
   width: 740px;
   margin: 0 auto 36px auto; }
+  @media (max-width: 760px) {
+    #primary #platforms, #primary p, #primary blockquote, #primary h3, #primary .search-link {
+      width: 100%;
+      padding: 0 10px; } }
 
 #primary h3 {
   margin-top: 72px;
@@ -582,6 +626,10 @@ blockquote {
     margin-left: -40px;
     color: #ccc;
     float: left; }
+    @media (max-width: 760px) {
+      blockquote:before {
+        font-size: 40px;
+        margin-left: -10px; } }
   #primary blockquote p:last-of-type {
     margin: 0 auto; }
 
@@ -618,11 +666,18 @@ a.search-link {
 #page-footer {
   height: 100px;
   margin-top: 100px; }
+  @media (max-width: 760px) {
+    #page-footer {
+      margin-top: 20px; } }
   #page-footer p {
     width: 740px;
     margin: 0 auto;
     font-size: 13px;
     line-height: 30px; }
+    @media (max-width: 760px) {
+      #page-footer p {
+        width: auto;
+        padding: 0 10px; } }
     #page-footer p a {
       border-bottom: 0; }
     #page-footer p .twitter, #page-footer p .feed, #page-footer p .facebook {
