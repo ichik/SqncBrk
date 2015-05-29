@@ -181,6 +181,13 @@ h1
 		position: absolute
 		top: 60px
 
+	+mobile
+		width: 75px
+		height: 75px
+		background-size: 75px 75px
+		position: absolute
+		left: 20px
+
 #backtoindex:hover h1
 	+animation(hvr-pop)
 	animation-duration: 0.3s
@@ -201,6 +208,11 @@ h1
 
 	+tablet
 		display: none
+
+	+mobile
+		top: 60px
+		position: absolute
+		right: 20px
 	
 	&:after
 		position: absolute
@@ -258,6 +270,9 @@ h1
 	+tablet
 		margin: 0 auto
 		position: relative
+
+	+mobile
+		margin: 0 auto
 	
 .nav-trigger
 	position: fixed
@@ -266,6 +281,9 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
+	
+	+mobile
+		height: 100vh
 	
 .nav-trigger:checked ~ #open-button > .horizontal
 	opacity: 0
@@ -287,6 +305,9 @@ h1
 
 		+tablet
 			font-size: $basefontsize * 0.8
+
+		+mobile
+			display: block
 	
 // morphing search
 .morphsearch-form
@@ -371,6 +392,9 @@ article.post
 	transform: translateY(-50%)
 	text-align: center
 	padding: 0 150px
+
+	+mobile
+		padding: 0 10px
 
 .post-cover
 	opacity: 0.7

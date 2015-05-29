@@ -332,6 +332,13 @@ h1 {
     h1 {
       position: absolute;
       top: 60px; } }
+  @media (max-width: 760px) {
+    h1 {
+      width: 75px;
+      height: 75px;
+      background-size: 75px 75px;
+      position: absolute;
+      left: 20px; } }
 
 #backtoindex:hover h1 {
   -webkit-animation: hvr-pop;
@@ -354,6 +361,11 @@ h1 {
   @media (min-width: 760px) and (max-width: 1060px) {
     #open-button {
       display: none; } }
+  @media (max-width: 760px) {
+    #open-button {
+      top: 60px;
+      position: absolute;
+      right: 20px; } }
   #open-button:after {
     position: absolute;
     top: 50%;
@@ -408,6 +420,9 @@ h1 {
     .hamburger-insides {
       margin: 0 auto;
       position: relative; } }
+  @media (max-width: 760px) {
+    .hamburger-insides {
+      margin: 0 auto; } }
 
 .nav-trigger {
   position: fixed;
@@ -416,6 +431,9 @@ h1 {
 .nav-trigger:checked ~ .menu-wrap {
   visibility: visible;
   height: 160px; }
+  @media (max-width: 760px) {
+    .nav-trigger:checked ~ .menu-wrap {
+      height: 100vh; } }
 
 .nav-trigger:checked ~ #open-button > .horizontal {
   opacity: 0; }
@@ -436,6 +454,9 @@ h1 {
     @media (min-width: 760px) and (max-width: 1060px) {
       .morphsearch-form li, .search-form li, #about-links li {
         font-size: 16px; } }
+    @media (max-width: 760px) {
+      .morphsearch-form li, .search-form li, #about-links li {
+        display: block; } }
 
 .morphsearch-form, .search-form {
   width: 150px;
@@ -512,6 +533,9 @@ article.post {
   transform: translateY(-50%);
   text-align: center;
   padding: 0 150px; }
+  @media (max-width: 760px) {
+    .post-content {
+      padding: 0 10px; } }
 
 .post-cover {
   opacity: 0.7;
