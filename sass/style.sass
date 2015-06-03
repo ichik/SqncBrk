@@ -1,19 +1,7 @@
 @import '../vendors/sanitize'
 /* All my styles go now */
 
-//variables
-$basefontsize: 20px
-$baselineheight: 36px
-$mainwidth: 740px
-$yellow: #f0ad2c
-$white: #fff
-$black: #000
-$tablet-width: 760px
-$desktop-width: 1060px
-$mobile-width: 320px
-
-
-// mixins
+// vendor mixins
 =keyframes($name)
 	@-webkit-keyframes #{$name}
 		@content
@@ -30,17 +18,11 @@ $mobile-width: 320px
 	-ms-animation: #{$str}
 	animation: #{$str}
 
-=tablet
-	@media (min-width: $tablet-width) and (max-width: $desktop-width)
-		@content
-
-=mobile
-	@media (max-width: $tablet-width)
-		@content
-
-
-
 // basic typography and stuff
+$basefontsize: 20px
+$baselineheight: 36px
+$mainwidth: 740px
+
 @font-face
 	font-family: MuseoSans
 	src: url("../fonts/MuseoSansCyrl_300Web.woff") format("woff")
@@ -56,9 +38,6 @@ $mobile-width: 320px
 body
 	font-family: MuseoSans
 
-::selection
-	background: $yellow
-
 h1,h2,h3
 	font-family: Museo
 
@@ -70,21 +49,9 @@ h2
 	line-height: $baselineheight * 2.5
 	margin-bottom: $baselineheight
 
-	+tablet
-		font-size: $basefontsize * 3
-		line-height: $baselineheight * 2
-
-	+mobile
-		font-size: $basefontsize * 1.5
-		line-height: $baselineheight * 1.2
-
 h3
 	font-size: $basefontsize * 1.5
 	line-height: $baselineheight * 1.5
-
-	+mobile
-		font-size: $basefontsize * 1.2
-		line-height: $baselineheight
 
 p,blockquote,li
 	font-size: $basefontsize
@@ -96,23 +63,16 @@ p,blockquote,li
 		line-height: $baselineheight * 0.5
 		font-family: MuseoSansItalic
 
-		+mobile
-			font-size: $basefontsize * 0.6
-
-	+mobile
-		font-size: $basefontsize * 0.8
-		line-height: $baselineheight * 0.7
-
 abbr
 	border-bottom: 1px dotted rgba(0,0,0,0.4)
 	cursor: help
 
 .highlight
-	background: $black
+	background: #000
 	margin-bottom: $baselineheight
 	
 	p,blockquote
-		color: $white
+		color: #fff
 	
 	abbr
 		border-color: rgba(255,255,255,0.4)
@@ -177,18 +137,6 @@ h1
 	top: 30px
 	z-index: 10000
 
-	+tablet
-		position: absolute
-		top: 60px
-
-	+mobile
-		width: 75px
-		height: 75px
-		background-size: 75px 75px
-		position: absolute
-		left: 20px
-		top: 40px
-
 #backtoindex:hover h1
 	+animation(hvr-pop)
 	animation-duration: 0.3s
@@ -199,21 +147,13 @@ h1
 // navigation
 #open-button
 	position: fixed
-	right: 50px
-	top: 70px
+	right: 30px
+	top: 60px
 	width: 30px
 	height: 30px
 	z-index: 1000
 	cursor: pointer
 	mix-blend-mode: exclusion
-
-	+tablet
-		display: none
-
-	+mobile
-		top: 60px
-		position: absolute
-		right: 20px
 	
 	&:after
 		position: absolute
@@ -234,7 +174,7 @@ h1
 	.spinner
 		width: 30px
 		height: 2px
-		background-color: $white
+		background-color: #fff
 		margin-bottom: 5px
 		border-radius: 2px
 		transition: all 0.3s
@@ -252,28 +192,14 @@ h1
 	background: rgba(255,255,255,0.95)
 	z-index: 999
 	width: 100%
-	box-shadow: 0 2px 20px -4px rgba(31, 31, 31, 0.5)
+	box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5)
 	top: 0
 	overflow: hidden
 	transition: height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear
-
-	+tablet
-		height: 40px
-
-	&.open
-		height: 100vh
-		background: rgb(255,255,255)
 	
 .hamburger-insides
 	width: $mainwidth
 	margin: 66px auto 0 auto
-
-	+tablet
-		margin: 0 auto
-		position: relative
-
-	+mobile
-		width: auto
 	
 .nav-trigger
 	position: fixed
@@ -282,9 +208,10 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
-	
-	+mobile
+
+	&.open
 		height: 100vh
+		background: rgb(255,255,255)
 	
 .nav-trigger:checked ~ #open-button > .horizontal
 	opacity: 0
@@ -299,24 +226,10 @@ h1
 	
 .morphsearch-form,#about-links
 	display: inline-block
-	transition: transform 0.3s ease-out
-
-	+mobile
-		display: block
-		width: 220px
-		margin: 0 auto
-		padding-left: 30px
 	
 	li
 		display: inline-block
 		margin-right: 20px
-
-		+tablet
-			font-size: $basefontsize * 0.8
-
-		+mobile
-			display: block
-			font-size: $basefontsize
 	
 // morphing search
 .morphsearch-form
@@ -327,20 +240,13 @@ h1
 	line-height: $baselineheight
 	float: right
 
-	+mobile
-		width: 220px
-		float: none
-
 .morphsearch-input
-	transition: font-size 0.3s ease-in, line-height 0.3s ease-in, transform 0.3s ease-in
+	transition: font-size 0.3s ease-in, line-height 0.3s ease-in
 	z-index: 1001
 	top: auto
 	
 	&:focus
 		outline: 0
-
-	+tablet
-		font-size: $basefontsize * 0.8
 		
 		
 .morphsearch-submit,.search-submit
@@ -349,25 +255,11 @@ h1
 .open .morphsearch-form,.search-form
 	width: $mainwidth
 
-	+mobile
-		width: 220px
-
 .open .morphsearch-input
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
 	padding-top: 100px
 	width: $mainwidth
-
-	+mobile
-		font-size: $basefontsize * 2
-		line-height: $baselineheight
-		width: 220px
-		padding-top: 0
-		transform: translateY(-200px) // THIS IS MAGIC NUMBER
-
-.open #about-links
-	+mobile
-		transform: translateY(-220px)
 
 .search-form
 	@extend .morphsearch-form
@@ -377,9 +269,6 @@ h1
 	height: auto
 	clear: both
 	float: none
-
-	+tablet
-		margin: 50px auto 0 auto
 	
 .search-input
 	@extend .morphsearch-input
@@ -393,22 +282,16 @@ article.post
 	height: 700px
 	width: 100%
 	position: relative
-	background-color: $black
+	background-color: #000
 	margin-bottom: 5px
-
-	+tablet
-		height: 500px
-
-	+mobile
-		height: 400px
-
+	
 	a
 		width: 100%
 		position: absolute
 		top: 0
 		height: 100%
 		display: block
-		color: $white
+		color: #fff
 		
 		&:hover .post-cover
 			opacity: 1
@@ -419,9 +302,6 @@ article.post
 	transform: translateY(-50%)
 	text-align: center
 	padding: 0 150px
-
-	+mobile
-		padding: 0 10px
 
 .post-cover
 	opacity: 0.7
@@ -438,7 +318,7 @@ article.post
 		top: 50%
 		transform: translateY(-50%)
 		text-align: center
-		border: 2px solid $black
+		border: 2px solid #000
 		margin: 0 auto
 		display: block
 		padding: 15px 95px
@@ -447,17 +327,17 @@ article.post
 		cursor: pointer
 		
 		&:hover
-			background: $black
-			color: $white
+			background: #000
+			color: #fff
 
 //article
 .article-cover
 	width: 100%
 	height: 100vh
-	background: $black
+	background: #000
 	
 	.post-content
-		color: $white
+		color: #fff
 		z-index: 200
 	
 	video
@@ -479,11 +359,11 @@ article.post
 	left: 0
 	border: 0
 	text-align: center
-	color: $white
+	color: #fff
 	z-index: 200
 
 	.mouse
-		border: 2px solid $white
+		border: 2px solid #fff
 		border-radius: 12px
 		width: 26px
 		height: 40px
@@ -505,8 +385,8 @@ article.post
 	padding-top: $baselineheight
 
 #platforms li
-	color: $yellow
-	border: 1px solid $yellow
+	color: #f0ad2c
+	border: 1px solid #f0ad2c
 	padding: 5px 10px
 	display: inline-block
 	margin: 10px 10px 10px 0
@@ -528,7 +408,7 @@ blockquote
 
 //404
 body.error404
-	background: url("../images/CaveStory.gif") 50% 100% no-repeat $black
+	background: url("../images/CaveStory.gif") 50% 100% no-repeat #000
 	min-height: 100vh
 	overflow: hidden
 
@@ -539,15 +419,14 @@ body.error404
 		position: absolute
 
 	h2
-		color: $white
+		color: #fff
 		text-align: center
 
 //search
 a.search-link
 	display: block
 	border: 0
-	color: $black
-	padding: 0 !important
+	color: #000
 
 	#primary & h3
 		margin-bottom: 0
