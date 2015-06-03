@@ -181,7 +181,7 @@ h2 {
   font-size: 80px;
   line-height: 90px;
   margin-bottom: 36px; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (min-width: 760px) and (max-width: 1020px) {
     h2 {
       font-size: 60px;
       line-height: 72px; } }
@@ -328,10 +328,15 @@ h1 {
   left: 30px;
   top: 30px;
   z-index: 10000; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (max-width: 760px) {
     h1 {
       position: absolute;
-      top: 60px; } }
+      width: 75px;
+      height: 75px;
+      background-size: 75px 75px; } }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    h1 {
+      position: absolute; } }
 
 #backtoindex:hover h1 {
   -webkit-animation: hvr-pop;
@@ -344,16 +349,20 @@ h1 {
 
 #open-button {
   position: fixed;
-  right: 50px;
-  top: 70px;
+  right: 30px;
+  top: 60px;
   width: 30px;
   height: 30px;
   z-index: 1000;
   cursor: pointer;
   mix-blend-mode: exclusion; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (max-width: 760px) {
     #open-button {
-      display: none; } }
+      position: absolute;
+      top: 50px; } }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    #open-button {
+      position: absolute; } }
   #open-button:after {
     position: absolute;
     top: 50%;
@@ -390,24 +399,29 @@ h1 {
   background: rgba(255, 255, 255, 0.95);
   z-index: 999;
   width: 100%;
-  box-shadow: 0 2px 20px -4px rgba(31, 31, 31, 0.5);
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
   top: 0;
   overflow: hidden;
   transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (max-width: 760px) {
     .menu-wrap {
-      height: 40px; } }
-  .menu-wrap.open {
-    height: 100vh;
-    background: white; }
+      position: absolute; } }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    .menu-wrap {
+      position: absolute; } }
 
 .hamburger-insides {
   width: 740px;
   margin: 66px auto 0 auto; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (max-width: 760px) {
     .hamburger-insides {
-      margin: 0 auto;
-      position: relative; } }
+      width: 200px;
+      position: relative;
+      margin: 140px auto 0 auto; } }
+  @media (min-width: 760px) and (max-width: 1020px) {
+    .hamburger-insides {
+      margin: 66px 0 0 150px;
+      width: 720px; } }
 
 .nav-trigger {
   position: fixed;
@@ -416,6 +430,12 @@ h1 {
 .nav-trigger:checked ~ .menu-wrap {
   visibility: visible;
   height: 160px; }
+  @media (max-width: 760px) {
+    .nav-trigger:checked ~ .menu-wrap {
+      height: 100vh; } }
+  .nav-trigger:checked ~ .menu-wrap.open {
+    height: 100vh;
+    background: white; }
 
 .nav-trigger:checked ~ #open-button > .horizontal {
   opacity: 0; }
@@ -433,9 +453,11 @@ h1 {
   .morphsearch-form li, .search-form li, #about-links li {
     display: inline-block;
     margin-right: 20px; }
-    @media (min-width: 760px) and (max-width: 1060px) {
+    @media (max-width: 760px) {
       .morphsearch-form li, .search-form li, #about-links li {
-        font-size: 16px; } }
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px; } }
 
 .morphsearch-form, .search-form {
   width: 150px;
@@ -444,6 +466,10 @@ h1 {
   font-size: 20px;
   line-height: 36px;
   float: right; }
+  @media (max-width: 760px) {
+    .morphsearch-form, .search-form {
+      float: none;
+      width: 200px; } }
 
 .morphsearch-input, .search-input {
   transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
@@ -451,9 +477,6 @@ h1 {
   top: auto; }
   .morphsearch-input:focus, .search-input:focus {
     outline: 0; }
-  @media (min-width: 760px) and (max-width: 1060px) {
-    .morphsearch-input, .search-input {
-      font-size: 16px; } }
 
 .morphsearch-submit, .search-submit {
   opacity: 0; }
@@ -466,6 +489,12 @@ h1 {
   line-height: 180px;
   padding-top: 100px;
   width: 740px; }
+  @media (max-width: 760px) {
+    .open .morphsearch-input, .open .search-input {
+      padding-top: 0;
+      font-size: 40px;
+      line-height: 36px;
+      width: 240px; } }
 
 .search-form {
   display: block;
@@ -474,9 +503,10 @@ h1 {
   height: auto;
   clear: both;
   float: none; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (max-width: 760px) {
     .search-form {
-      margin: 50px auto 0 auto; } }
+      width: 200px !important;
+      margin: 200px auto 0 auto; } }
 
 .search-input {
   font-size: 100px;
@@ -490,7 +520,7 @@ article.post {
   position: relative;
   background-color: #000;
   margin-bottom: 5px; }
-  @media (min-width: 760px) and (max-width: 1060px) {
+  @media (min-width: 760px) and (max-width: 1020px) {
     article.post {
       height: 500px; } }
   @media (max-width: 760px) {
@@ -512,6 +542,9 @@ article.post {
   transform: translateY(-50%);
   text-align: center;
   padding: 0 150px; }
+  @media (max-width: 760px) {
+    .post-content {
+      padding: 0 10px; } }
 
 .post-cover {
   opacity: 0.7;
@@ -582,6 +615,10 @@ article.post {
 #primary #platforms, #primary p, #primary blockquote, #primary h3, #primary .search-link {
   width: 740px;
   margin: 0 auto 36px auto; }
+  @media (max-width: 760px) {
+    #primary #platforms, #primary p, #primary blockquote, #primary h3, #primary .search-link {
+      width: 100%;
+      padding: 0 10px; } }
 
 #primary h3 {
   margin-top: 72px;
@@ -607,6 +644,10 @@ blockquote {
     margin-left: -40px;
     color: #ccc;
     float: left; }
+    @media (max-width: 760px) {
+      blockquote:before {
+        font-size: 40px;
+        margin-left: -10px; } }
   #primary blockquote p:last-of-type {
     margin: 0 auto; }
 
@@ -633,22 +674,35 @@ a.search-link {
   a.search-link img {
     margin-right: 36px;
     margin-bottom: 18px; }
+    @media (max-width: 760px) {
+      a.search-link img {
+        margin-left: 10px; } }
   a.search-link time {
     color: #888;
     font-size: 14px;
     display: block;
     margin-bottom: 18px; }
+    @media (max-width: 760px) {
+      a.search-link time {
+        padding: 0 10px; } }
   #primary a.search-link:hover h3 {
     color: #bb3300; }
 
 #page-footer {
   height: 100px;
   margin-top: 100px; }
+  @media (max-width: 760px) {
+    #page-footer {
+      margin-top: 20px; } }
   #page-footer p {
     width: 740px;
     margin: 0 auto;
     font-size: 13px;
     line-height: 30px; }
+    @media (max-width: 760px) {
+      #page-footer p {
+        width: auto;
+        padding: 0 10px; } }
     #page-footer p a {
       border-bottom: 0; }
     #page-footer p .twitter, #page-footer p .feed, #page-footer p .facebook {
