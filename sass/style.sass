@@ -8,6 +8,7 @@ $mainwidth: 740px
 $yellow: #f0ad2c
 $white: #fff
 $black: #000
+$grey: #ccc
 $tablet-width: 760px
 $desktop-width: 1020px
 $mobile-width: 320px
@@ -498,7 +499,7 @@ article.post
 	margin: 10px 10px 10px 0
 
 blockquote
-	border-left: 4px solid #ccc
+	border-left: 4px solid $grey
 	padding: 10px 0 10px 50px
 
 	&:before
@@ -506,7 +507,7 @@ blockquote
 		content: "\201C"
 		font-size: 80px
 		margin-left: -40px
-		color: #ccc
+		color: $grey
 		float: left
 
 		+mobile
