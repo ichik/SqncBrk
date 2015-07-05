@@ -252,12 +252,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(0.5, 0.5, 1);
     -ms-transform: scale3d(0.5, 0.5, 1);
     transform: scale3d(0.5, 0.5, 1); }
   to {
     opacity: 0;
     -webkit-transform: scale3d(1.2, 1.2, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(1.2, 1.2, 1);
     -ms-transform: scale3d(1.2, 1.2, 1);
     transform: scale3d(1.2, 1.2, 1); } }
@@ -265,12 +267,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(0.5, 0.5, 1);
     -ms-transform: scale3d(0.5, 0.5, 1);
     transform: scale3d(0.5, 0.5, 1); }
   to {
     opacity: 0;
     -webkit-transform: scale3d(1.2, 1.2, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(1.2, 1.2, 1);
     -ms-transform: scale3d(1.2, 1.2, 1);
     transform: scale3d(1.2, 1.2, 1); } }
@@ -278,12 +282,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(0.5, 0.5, 1);
     -ms-transform: scale3d(0.5, 0.5, 1);
     transform: scale3d(0.5, 0.5, 1); }
   to {
     opacity: 0;
     -webkit-transform: scale3d(1.2, 1.2, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(1.2, 1.2, 1);
     -ms-transform: scale3d(1.2, 1.2, 1);
     transform: scale3d(1.2, 1.2, 1); } }
@@ -291,36 +297,42 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(0.5, 0.5, 1);
     -ms-transform: scale3d(0.5, 0.5, 1);
     transform: scale3d(0.5, 0.5, 1); }
   to {
     opacity: 0;
     -webkit-transform: scale3d(1.2, 1.2, 1);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale3d(1.2, 1.2, 1);
     -ms-transform: scale3d(1.2, 1.2, 1);
     transform: scale3d(1.2, 1.2, 1); } }
 @-webkit-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.3);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3); } }
 @-moz-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.3);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3); } }
 @-ms-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.3);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3); } }
 @keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.3);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3); } }
@@ -328,12 +340,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px); }
   100% {
     opacity: 0;
     -webkit-transform: translateY(10px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px); } }
@@ -341,12 +355,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px); }
   100% {
     opacity: 0;
     -webkit-transform: translateY(10px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px); } }
@@ -354,12 +370,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px); }
   100% {
     opacity: 0;
     -webkit-transform: translateY(10px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px); } }
@@ -367,12 +385,14 @@ a, a:link {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px); }
   100% {
     opacity: 0;
     -webkit-transform: translateY(10px);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px); } }
@@ -502,6 +522,7 @@ h1 {
 
 .nav-trigger:checked ~ #open-button > .diagonal.part-1 {
   -webkit-transform: rotate(405deg);
+  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: rotate(405deg);
   -ms-transform: rotate(405deg);
   transform: rotate(405deg);
@@ -509,6 +530,7 @@ h1 {
 
 .nav-trigger:checked ~ #open-button > .diagonal.part-2 {
   -webkit-transform: rotate(-405deg);
+  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: rotate(-405deg);
   -ms-transform: rotate(-405deg);
   transform: rotate(-405deg);
@@ -608,6 +630,7 @@ article.post {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -630,6 +653,7 @@ article.post {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -731,12 +755,12 @@ blockquote {
 
 body.error404 {
   background: url("../images/CaveStory.gif") 50% 100% no-repeat #000;
-  background-size: 640px 480px;
   min-height: 100vh;
   overflow: hidden; }
   body.error404 #primary {
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
