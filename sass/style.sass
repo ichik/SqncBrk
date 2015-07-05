@@ -9,12 +9,20 @@ $yellow: #f0ad2c
 $white: #fff
 $black: #000
 $grey: #ccc
+$blue: #0c4f72
 $tablet-width: 760px
 $desktop-width: 1020px
 $mobile-width: 320px
 
 
 // mixins
+=transform($str)
+	-webkit-transform: #{$str}
+	-webkit-transform: translate3d(0,0,0)
+	-moz-transform: #{$str}
+	-ms-transform: #{$str}
+	transform: #{$str}
+
 =keyframes($name)
 	@-webkit-keyframes #{$name}
 		@content
@@ -131,7 +139,7 @@ a,a:link
 	border-bottom: 1px solid
 	border-color: #487b95
 	border-color: rgba(12,79,114,0.2)
-	color: #0c4f72
+	color: $blue
 
 	&:visited
 		color: #8c66b2
@@ -147,22 +155,22 @@ a,a:link
 +keyframes(menu-button-hover)
 	0%
 		opacity: 1
-		transform: scale3d(0.5, 0.5, 1)
+		+transform(scale3d(0.5, 0.5, 1))
 	to
 		opacity: 0
-		transform: scale3d(1.2, 1.2, 1)
+		+transform(scale3d(1.2, 1.2, 1))
 
 +keyframes(hvr-pop)
 	50%
-		transform: scale(1.3)
+		+transform(scale(1.3))
 
 +keyframes(scroll)
 	0%
 		opacity: 1
-		transform: translateY(0px)
+		+transform(translateY(0px))
 	100%
 		opacity: 0
-		transform: translateY(10px)
+		+transform(translateY(10px))
 
 // logo
 h1
@@ -292,11 +300,11 @@ h1
 	opacity: 0
 	
 .nav-trigger:checked ~ #open-button > .diagonal.part-1
-	transform: rotate(405deg)
+	+transform(rotate(405deg))
 	margin-top: 14px
 	
 .nav-trigger:checked ~ #open-button > .diagonal.part-2
-	transform: rotate(-405deg)
+	+transform(rotate(-405deg))
 	margin-top: -14px
 	
 .morphsearch-form,#about-links
@@ -392,6 +400,9 @@ article.post
 		height: 100%
 		display: block
 		color: $white
+
+		&:hover
+			color: $white
 		
 		&:hover .post-cover
 			opacity: 1
@@ -399,7 +410,7 @@ article.post
 .post-content
 	position: relative
 	top: 50%
-	transform: translateY(-50%)
+	+transform(translateY(-50%))
 	text-align: center
 	padding: 0 150px
 
@@ -419,7 +430,7 @@ article.post
 	#load-more
 		position: relative
 		top: 50%
-		transform: translateY(-50%)
+		+transform(translateY(-50%))
 		text-align: center
 		border: 2px solid $black
 		margin: 0 auto
@@ -476,13 +487,17 @@ article.post
 		font-size: $basefontsize * 0.7
 		+animation(scroll 2s infinite)
 
-#primary #platforms,#primary p,#primary blockquote,#primary h3,#primary .search-link
+#primary #platforms,#primary p,#primary blockquote,#primary h3
 	width: $mainwidth
 	margin: 0 auto $baselineheight auto
 
 	+mobile
 		width: 100%
 		padding: 0 10px
+
+#primary .search-link
+	width: $mainwidth + 60px
+	margin: 0 auto $baselineheight auto
 
 #primary h3
 	margin-top: $baselineheight * 2
@@ -520,12 +535,13 @@ blockquote
 //404
 body.error404
 	background: url("../images/CaveStory.gif") 50% 100% no-repeat $black
+	background-size: 640px 480px
 	min-height: 100vh
 	overflow: hidden
 
 	#primary
 		top: 50%
-		transform: translateY(-50%)
+		+transform(translateY(-50%))
 		width: 100%
 		position: absolute
 
@@ -538,10 +554,15 @@ a.search-link
 	display: block
 	border: 0
 	color: $black
-	padding: 0 !important
+	padding: 5px 30px 5px 30px !important
+	transition: all 0.2s ease
+
+	&:hover
+		box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5)
 
 	#primary & h3
-		margin-bottom: 0
+		margin: 0
+		color: $blue
 
 	img
 		margin-right: $baselineheight
