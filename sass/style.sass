@@ -69,6 +69,16 @@ $mobile-width: 320px
 	-ms-justify-content: #{$value}
 	justify-content: #{$value}
 
+=flex-wrap($value)
+	-webkit-flex-wrap: #{$value}
+	-ms-flex-wrap: #{$value}
+	flex-wrap: #{$value}
+
+=align-content($value)
+	-webkit-align-content: #{$value}
+	-ms-align-content: #{$value}
+	align-content: #{$value}
+
 // basic typography and stuff
 @font-face
 	font-family: MuseoSans
@@ -133,6 +143,10 @@ p,blockquote,li
 	+mobile
 		font-size: $basefontsize * 0.8
 		line-height: $baselineheight * 0.7
+
+	+tablet
+		font-size: $basefontsize * 0.9
+		line-height: $baselineheight * 0.9
 
 abbr
 	border-bottom: 1px dotted rgba(0,0,0,0.4)
@@ -215,7 +229,11 @@ h1
 		background-size: 75px 75px
 
 	+tablet
-		position: absolute
+		width: 50px
+		height: 50px
+		background-size: 50px 50px
+		left: 10px
+		top: 10px
 
 #backtoindex:hover h1
 	+animation(hvr-pop)
@@ -240,7 +258,7 @@ h1
 		top: 50px
 
 	+tablet
-		position: absolute
+		display: none
 	
 	&:after
 		position: absolute
@@ -284,26 +302,31 @@ h1
 	overflow: hidden
 	+flexbox()
 	+justify-content(center)
-	+transition(height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear 1s)
+	+transition(height 0.3s cubic-bezier(0.7,0,0.3,1), background 0.5s linear 1s)
 
 	+mobile
 		position: absolute
 
 	+tablet
-		position: absolute
+		height: 70px
 	
 .hamburger-insides
 	width: $mainwidth
 	margin: 66px auto 0 auto
-
+	+flexbox()
+	+justify-content(space-between)
+	+flex-wrap(wrap)
+	+align-content(flex-start)
+	
 	+mobile
 		width: 200px
 		position: relative
 		margin: 140px auto 0 auto
 
 	+tablet
-		margin: 66px 0 0 150px
-		width: $mainwidth - 20
+		margin: 18px auto 0 auto
+		//width: $mainwidth - 20
+		padding-left: 90px
 	
 .nav-trigger
 	position: fixed
@@ -312,13 +335,14 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
+	+transform(translate3d(0, 0, 0))
 
 	+mobile
 		height: 100vh
 
-	&.open
-		height: 100vh
-		background: rgb(255,255,255)
+.menu-wrap.open
+	height: 100vh !important
+	background: rgb(255,255,255)
 	
 .nav-trigger:checked ~ #open-button > .horizontal
 	opacity: 0
@@ -336,7 +360,7 @@ h1
 	
 	li
 		display: inline-block
-		margin-right: 20px
+		margin: 0 20px 0 0
 
 		+mobile
 			display: block
@@ -350,16 +374,21 @@ h1
 	+transition(width 0.4s cubic-bezier(0.7,0,0.3,1) 0.4s)
 	font-size: $basefontsize
 	line-height: $baselineheight
-	float: right
+	+transform(translate3d(0, 0, 0))
 
 	+mobile
 		float: none
 		width: 200px
 
+	+tablet
+		font-size: $basefontsize * 0.9
+		line-height: $baselineheight * 0.9
+
 .morphsearch-input
-	+transition(padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s)
+	+transition(padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s)
 	z-index: 1001
 	top: auto
+	+transform(translate3d(0, 0, 0))
 	
 	&:focus
 		outline: 0
@@ -375,7 +404,7 @@ h1
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
 	padding-top: 100px
-	width: $mainwidth
+	width: 100%
 
 	+mobile
 		padding-top: 0
