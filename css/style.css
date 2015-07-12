@@ -482,10 +482,14 @@ h1 {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -webkit-transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
-  -moz-transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
-  -ms-transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
-  transition: height 0.3s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s; }
+  -webkit-transition: height 0.3s ease-out;
+  -moz-transition: height 0.3s ease-out;
+  -ms-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
   @media (max-width: 760px) {
     .menu-wrap {
       position: absolute; } }
@@ -525,18 +529,18 @@ h1 {
 
 .nav-trigger:checked ~ .menu-wrap {
   visibility: visible;
-  height: 160px;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  height: 160px; }
   @media (max-width: 760px) {
     .nav-trigger:checked ~ .menu-wrap {
       height: 100vh; } }
 
 .menu-wrap.open {
-  height: 100vh !important;
-  background: white; }
+  height: 100% !important;
+  background: white;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 .nav-trigger:checked ~ #open-button > .horizontal {
   opacity: 0; }
@@ -569,10 +573,6 @@ h1 {
 .morphsearch-form, .search-form {
   width: 150px;
   height: 24px;
-  -webkit-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
-  -moz-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
-  -ms-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
-  transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
   font-size: 20px;
   line-height: 36px;
   -webkit-transform: translate3d(0, 0, 0);
@@ -589,10 +589,10 @@ h1 {
       line-height: 32.4px; } }
 
 .morphsearch-input, .search-input {
-  -webkit-transition: padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
-  -moz-transition: padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
-  -ms-transition: padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
-  transition: padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
+  -webkit-transition: font-size 0.2s ease;
+  -moz-transition: font-size 0.2s ease;
+  -ms-transition: font-size 0.2s ease;
+  transition: font-size 0.2s ease;
   z-index: 1001;
   top: auto;
   -webkit-transform: translate3d(0, 0, 0);
@@ -606,12 +606,16 @@ h1 {
   opacity: 0; }
 
 .open .morphsearch-form, .open .search-form, .search-form {
-  width: 740px; }
+  width: 740px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 .open .morphsearch-input, .open .search-input {
   font-size: 100px;
   line-height: 180px;
-  padding-top: 100px;
+  margin-top: 100px;
   width: 100%; }
   @media (max-width: 760px) {
     .open .morphsearch-input, .open .search-input {

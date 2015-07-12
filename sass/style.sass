@@ -302,7 +302,8 @@ h1
 	overflow: hidden
 	+flexbox()
 	+justify-content(center)
-	+transition(height 0.3s cubic-bezier(0.7,0,0.3,1), background 0.5s linear 1s)
+	+transition(height 0.3s ease-out)
+	+transform(translate3d(0,0,0))
 
 	+mobile
 		position: absolute
@@ -335,14 +336,14 @@ h1
 .nav-trigger:checked ~ .menu-wrap
 	visibility: visible
 	height: 160px
-	+transform(translate3d(0, 0, 0))
 
 	+mobile
 		height: 100vh
 
 .menu-wrap.open
-	height: 100vh !important
+	height: 100% !important
 	background: rgb(255,255,255)
+	+transform(translate3d(0,0,0))
 	
 .nav-trigger:checked ~ #open-button > .horizontal
 	opacity: 0
@@ -371,7 +372,6 @@ h1
 .morphsearch-form
 	width: 150px
 	height: 24px
-	+transition(width 0.4s cubic-bezier(0.7,0,0.3,1) 0.4s)
 	font-size: $basefontsize
 	line-height: $baselineheight
 	+transform(translate3d(0, 0, 0))
@@ -385,7 +385,7 @@ h1
 		line-height: $baselineheight * 0.9
 
 .morphsearch-input
-	+transition(padding-top 0.2s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s)
+	+transition(font-size 0.2s ease)
 	z-index: 1001
 	top: auto
 	+transform(translate3d(0, 0, 0))
@@ -399,11 +399,12 @@ h1
 
 .open .morphsearch-form,.search-form
 	width: $mainwidth
+	+transform(translate3d(0, 0, 0))
 
 .open .morphsearch-input
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
-	padding-top: 100px
+	margin-top: 100px
 	width: 100%
 
 	+mobile
