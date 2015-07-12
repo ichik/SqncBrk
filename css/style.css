@@ -593,10 +593,10 @@ h1 {
       line-height: 32.4px; } }
 
 .morphsearch-input, .search-input {
-  -webkit-transition: font-size 0.6s ease;
-  -moz-transition: font-size 0.6s ease;
-  -ms-transition: font-size 0.6s ease;
-  transition: font-size 0.6s ease;
+  -webkit-transition: font-size 0.6s ease, margin-top 0.4s ease;
+  -moz-transition: font-size 0.6s ease, margin-top 0.4s ease;
+  -ms-transition: font-size 0.6s ease, margin-top 0.4s ease;
+  transition: font-size 0.6s ease, margin-top 0.4s ease;
   z-index: 1001;
   top: auto;
   -webkit-transform: translate3d(0, 0, 0);
