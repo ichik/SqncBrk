@@ -223,10 +223,12 @@ h1
 	z-index: 10000
 
 	+mobile
-		position: absolute
-		width: 75px
-		height: 75px
-		background-size: 75px 75px
+		//position: absolute
+		width: 50px
+		height: 50px
+		background-size: 50px 50px
+		left: 10px
+		top: 10px
 
 	+tablet
 		width: 50px
@@ -254,8 +256,17 @@ h1
 	mix-blend-mode: exclusion
 
 	+mobile
-		position: absolute
-		top: 50px
+		//position: absolute
+		top: 13px
+		right: 10px
+		background: #000
+		mix-blend-mode: normal
+		width: 44px
+		height: 44px
+		border-radius: 30px
+		padding: 7px
+
+		
 
 	+tablet
 		display: none
@@ -306,7 +317,9 @@ h1
 	+transform(translate3d(0,0,0))
 
 	+mobile
-		position: absolute
+		height: 70px
+		+justify-content(center)
+		padding-left: 10px
 
 	+tablet
 		height: 70px
@@ -318,16 +331,21 @@ h1
 	+justify-content(space-between)
 	+flex-wrap(wrap)
 	+align-content(flex-start)
-	
-	+mobile
-		width: 200px
-		position: relative
-		margin: 140px auto 0 auto
 
 	+tablet
 		margin: 18px auto 0 auto
 		//width: $mainwidth - 20
 		padding-left: 90px
+
+	+mobile
+		flex-direction: column
+		+justify-content(flex-start)
+		margin-top: 90px
+		max-width: 200px
+
+	li
+		+mobile
+			font-size: $basefontsize
 	
 .nav-trigger
 	position: fixed
@@ -339,6 +357,9 @@ h1
 
 	+mobile
 		height: 100vh
+
+.nav-trigger:checked ~ #backtoindex
+	position: fixed
 
 .menu-wrap.open
 	height: 100% !important
@@ -423,15 +444,17 @@ h1
 	clear: both
 	float: none
 
+	+tablet
+		margin: 0 0 0 20px
+
 	+mobile
 		width: 200px !important
-		margin: 200px auto 0 auto
 	
 .search-input
 	@extend .morphsearch-input
 	font-size: $basefontsize * 5
 	line-height: $baselineheight * 5
-	padding-top: 100px
+	//padding-top: 100px
 	width: $mainwidth
 
 // index
@@ -553,6 +576,16 @@ article.post
 #primary .search-link
 	width: $mainwidth + 60px
 	margin: 0 auto $baselineheight auto
+
+	+tablet
+		width: 100%
+
+	+mobile
+		width: 100%
+
+	p
+		+tablet
+			width: 100%
 
 #primary h3
 	margin-top: $baselineheight * 2
