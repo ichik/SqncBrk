@@ -429,14 +429,9 @@ h1 {
   mix-blend-mode: exclusion; }
   @media (max-width: 760px) {
     #open-button {
-      top: 13px;
+      top: 20px;
       right: 10px;
-      background: #000;
-      mix-blend-mode: normal;
-      width: 44px;
-      height: 44px;
-      border-radius: 30px;
-      padding: 7px; } }
+      mix-blend-mode: normal; } }
   @media (min-width: 760px) and (max-width: 1020px) {
     #open-button {
       display: none; } }
@@ -467,6 +462,9 @@ h1 {
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     transition: all 0.3s; }
+    @media (max-width: 760px) {
+      #open-button .spinner {
+        background-color: #000; } }
   #open-button .horizontal {
     width: 26px;
     margin-left: 2px; }
