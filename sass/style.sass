@@ -52,7 +52,22 @@ $mobile-width: 320px
 	@media (max-width: $tablet-width)
 		@content
 
+=flexbox
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
 
+=flex($values...)
+	-moz-box-flex: #{$values}
+	-webkit-flex: #{$values}
+	-ms-flex: #{$values}
+	flex: #{$values}
+
+=justify-content($value)
+	-webkit-justify-content: #{$value}
+	-ms-justify-content: #{$value}
+	justify-content: #{$value}
 
 // basic typography and stuff
 @font-face
@@ -267,7 +282,9 @@ h1
 	box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5)
 	top: 0
 	overflow: hidden
-	+transition(height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear)
+	+flexbox()
+	+justify-content(center)
+	+transition(height 0.5s cubic-bezier(0.7,0,0.3,1), background 0.5s linear 1s)
 
 	+mobile
 		position: absolute
@@ -330,7 +347,7 @@ h1
 .morphsearch-form
 	width: 150px
 	height: 24px
-	+transition(width 0.7s cubic-bezier(0.7,0,0.3,1))
+	+transition(width 0.4s cubic-bezier(0.7,0,0.3,1) 0.4s)
 	font-size: $basefontsize
 	line-height: $baselineheight
 	float: right
@@ -340,7 +357,7 @@ h1
 		width: 200px
 
 .morphsearch-input
-	+transition(font-size 0.3s ease-in, line-height 0.3s ease-in)
+	+transition(padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s)
 	z-index: 1001
 	top: auto
 	

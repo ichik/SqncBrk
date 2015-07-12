@@ -467,10 +467,17 @@ h1 {
   box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5);
   top: 0;
   overflow: hidden;
-  -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear;
-  -moz-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear;
-  -ms-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear;
-  transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear; }
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
+  -moz-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
+  -ms-transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s;
+  transition: height 0.5s cubic-bezier(0.7, 0, 0.3, 1), background 0.5s linear 1s; }
   @media (max-width: 760px) {
     .menu-wrap {
       position: absolute; } }
@@ -536,10 +543,10 @@ h1 {
 .morphsearch-form, .search-form {
   width: 150px;
   height: 24px;
-  -webkit-transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
-  -moz-transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
-  -ms-transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
-  transition: width 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+  -moz-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+  -ms-transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+  transition: width 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
   font-size: 20px;
   line-height: 36px;
   float: right; }
@@ -549,10 +556,10 @@ h1 {
       width: 200px; } }
 
 .morphsearch-input, .search-input {
-  -webkit-transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
-  -moz-transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
-  -ms-transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
-  transition: font-size 0.3s ease-in, line-height 0.3s ease-in;
+  -webkit-transition: padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
+  -moz-transition: padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
+  -ms-transition: padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
+  transition: padding-top 0.1s ease-in, font-size 0.3s ease-in 0.4s, line-height 0.3s ease-in 0.4s;
   z-index: 1001;
   top: auto; }
   .morphsearch-input:focus, .search-input:focus {
