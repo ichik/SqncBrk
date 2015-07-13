@@ -546,6 +546,8 @@ article.post
 	width: 100%
 	height: 100vh
 	background: $black
+	overflow: hidden
+	position: absolute
 	
 	.post-content
 		color: $white
@@ -560,6 +562,10 @@ article.post
 		height: auto
 		left: 0
 		top: 0
+		right: 0
+		object-fit: cover
+		overflow: hidden
+		max-width: 0
 
 #scroll-to-content
 	width: 100%
