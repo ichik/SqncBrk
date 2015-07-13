@@ -409,8 +409,17 @@ h1 {
   -moz-animation: hvr-pop;
   -ms-animation: hvr-pop;
   animation: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
   animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
   animation-iteration-count: 1; }
 
 #open-button {

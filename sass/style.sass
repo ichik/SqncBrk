@@ -44,6 +44,24 @@ $mobile-width: 320px
 	-ms-animation: #{$str}
 	animation: #{$str}
 
+=animation-duration($str)
+	-webkit-animation-duration: #{$str}
+	-moz-animation-duration: #{$str}
+	-ms-animation-duration: #{$str}
+	animation-duration: #{$str}
+
+=animation-timing-function($str)
+	-webkit-animation-timing-function: #{$str}
+	-moz-animation-timing-function: #{$str}
+	-ms-animation-timing-function: #{$str}
+	animation-timing-function: #{$str}
+
+=animation-iteration-count($str)
+	-webkit-animation-iteration-count: #{$str}
+	-moz-animation-iteration-count: #{$str}
+	-ms-animation-iteration-count: #{$str}
+	animation-iteration-count: #{$str}
+
 =tablet
 	@media (min-width: $tablet-width) and (max-width: $desktop-width)
 		@content
@@ -237,9 +255,9 @@ h1
 
 #backtoindex:hover h1
 	+animation(hvr-pop)
-	animation-duration: 0.3s
-	animation-timing-function: ease-out
-	animation-iteration-count: 1
+	+animation-duration(0.3s)
+	+animation-timing-function(ease-out)
+	+animation-iteration-count(1)
 	
 
 // navigation
