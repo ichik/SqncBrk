@@ -168,7 +168,9 @@ textarea {
 body {
   font-family: MuseoSans;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden; }
+  -moz-backface-visibility: hidden;
+  color: #000205;
+  background-color: #fffcfa; }
 
 ::selection {
   background: #f0ad2c; }
@@ -225,10 +227,10 @@ abbr {
   cursor: help; }
 
 .highlight {
-  background: #000;
+  background: #000205;
   margin-bottom: 36px; }
   .highlight p, .highlight blockquote {
-    color: #fff; }
+    color: #fffcfa; }
   .highlight abbr {
     border-color: rgba(255, 255, 255, 0.4); }
   .highlight img {
@@ -459,7 +461,7 @@ h1 {
   #open-button .spinner {
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: #fffcfa;
     margin-bottom: 5px;
     border-radius: 2px;
     -webkit-transition: all 0.3s;
@@ -468,7 +470,7 @@ h1 {
     transition: all 0.3s; }
     @media (max-width: 760px) {
       #open-button .spinner {
-        background-color: #000; } }
+        background-color: #000205; } }
   #open-button .horizontal {
     width: 26px;
     margin-left: 2px; }
@@ -680,7 +682,7 @@ article.post {
   height: 700px;
   width: 100%;
   position: relative;
-  background-color: #000;
+  background-color: #000205;
   margin-bottom: 5px; }
   @media (min-width: 760px) and (max-width: 1020px) {
     article.post {
@@ -694,9 +696,9 @@ article.post {
     top: 0;
     height: 100%;
     display: block;
-    color: #fff; }
+    color: #fffcfa; }
     article.post a:hover {
-      color: #fff; }
+      color: #fffcfa; }
     article.post a:hover .post-cover {
       opacity: 1; }
 
@@ -733,7 +735,7 @@ article.post {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-    border: 2px solid #000;
+    border: 2px solid #000205;
     margin: 0 auto;
     display: block;
     padding: 15px 95px;
@@ -744,16 +746,16 @@ article.post {
     transition: all 0.5s ease;
     cursor: pointer; }
     #load-more-holder #load-more:hover {
-      background: #000;
-      color: #fff; }
+      background: #000205;
+      color: #fffcfa; }
 
 .article-cover {
   width: 100%;
   height: 100vh;
-  background: #000;
+  background: #000205;
   overflow: hidden; }
   .article-cover .post-content {
-    color: #fff;
+    color: #fffcfa;
     z-index: 200; }
   .article-cover video {
     position: absolute;
@@ -778,10 +780,10 @@ article.post {
   left: 0;
   border: 0;
   text-align: center;
-  color: #fff;
+  color: #fffcfa;
   z-index: 200; }
   #scroll-to-content .mouse {
-    border: 2px solid #fff;
+    border: 2px solid #fffcfa;
     border-radius: 12px;
     width: 26px;
     height: 40px;
@@ -846,7 +848,7 @@ blockquote {
     margin: 0 auto; }
 
 body.error404 {
-  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000;
+  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000205;
   min-height: 100vh;
   overflow: hidden; }
   body.error404 #primary {
@@ -858,13 +860,13 @@ body.error404 {
     width: 100%;
     position: absolute; }
   body.error404 h2 {
-    color: #fff;
+    color: #fffcfa;
     text-align: center; }
 
 a.search-link {
   display: block;
   border: 0;
-  color: #000;
+  color: #000205;
   padding: 5px 30px 5px 30px !important;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
