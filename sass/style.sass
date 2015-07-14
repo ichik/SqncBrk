@@ -7,7 +7,7 @@ $baselineheight: 36px
 $mainwidth: 740px
 $yellow: #f0ad2c
 $white: #fffcfa
-$black: #000205
+$black: #000a14
 $grey: #ccc
 $blue: #0c4f72
 $tablet-width: 760px
@@ -142,12 +142,18 @@ body
 	-moz-backface-visibility: hidden
 	color: $black
 	background-color: $white
+	-webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0
+	-moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0
+	font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0
 
 ::selection
 	background: $yellow
 
 h1,h2,h3
 	font-family: Museo
+	-webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1
+	-moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1
+	font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1
 
 blockquote
 	font-family: MuseoSansItalic

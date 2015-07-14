@@ -169,14 +169,20 @@ body {
   font-family: MuseoSans;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  color: #000205;
-  background-color: #fffcfa; }
+  color: #000a14;
+  background-color: #fffcfa;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; }
 
 ::selection {
   background: #f0ad2c; }
 
 h1, h2, h3 {
-  font-family: Museo; }
+  font-family: Museo;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1; }
 
 blockquote {
   font-family: MuseoSansItalic; }
@@ -227,7 +233,7 @@ abbr {
   cursor: help; }
 
 .highlight {
-  background: #000205;
+  background: #000a14;
   margin-bottom: 36px; }
   .highlight p, .highlight blockquote {
     color: #fffcfa; }
@@ -470,7 +476,7 @@ h1 {
     transition: all 0.3s; }
     @media (max-width: 760px) {
       #open-button .spinner {
-        background-color: #000205; } }
+        background-color: #000a14; } }
   #open-button .horizontal {
     width: 26px;
     margin-left: 2px; }
@@ -681,7 +687,7 @@ article.post {
   height: 700px;
   width: 100%;
   position: relative;
-  background-color: #000205;
+  background-color: #000a14;
   margin-bottom: 5px; }
   @media (min-width: 760px) and (max-width: 1020px) {
     article.post {
@@ -734,7 +740,7 @@ article.post {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-    border: 2px solid #000205;
+    border: 2px solid #000a14;
     margin: 0 auto;
     display: block;
     padding: 15px 95px;
@@ -745,13 +751,13 @@ article.post {
     transition: all 0.5s ease;
     cursor: pointer; }
     #load-more-holder #load-more:hover {
-      background: #000205;
+      background: #000a14;
       color: #fffcfa; }
 
 .article-cover {
   width: 100%;
   height: 100vh;
-  background: #000205;
+  background: #000a14;
   overflow: hidden; }
   .article-cover .post-content {
     color: #fffcfa;
@@ -847,7 +853,7 @@ blockquote {
     margin: 0 auto; }
 
 body.error404 {
-  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000205;
+  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000a14;
   min-height: 100vh;
   overflow: hidden; }
   body.error404 #primary {
@@ -865,7 +871,7 @@ body.error404 {
 a.search-link {
   display: block;
   border: 0;
-  color: #000205;
+  color: #000a14;
   padding: 5px 30px 5px 30px !important;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
