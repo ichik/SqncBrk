@@ -881,7 +881,13 @@ a.search-link {
     box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5); }
   #primary a.search-link h3 {
     margin: 0;
-    color: #0c4f72; }
+    color: #0c4f72;
+    border-bottom: 1px solid;
+    border-color: #487b95;
+    border-color: rgba(12, 79, 114, 0.2);
+    color: #0c4f72;
+    width: auto;
+    display: inline !important; }
   a.search-link img {
     margin-right: 36px;
     margin-bottom: 18px; }
@@ -896,8 +902,14 @@ a.search-link {
     @media (max-width: 760px) {
       a.search-link time {
         padding: 0 10px; } }
-  #primary a.search-link:hover h3 {
-    color: #bb3300; }
+  #primary a.search-link:visited h3 {
+    color: #8c66b2;
+    border-color: #8c66b2;
+    border-color: rgba(102, 51, 153, 0.4); }
+  #primary a.search-link:hover h3, #primary a.search-link:active h3 {
+    color: #bb3300;
+    border-color: #cc663f;
+    border-color: rgba(187, 51, 0, 0.2); }
 
 #page-footer {
   height: 100px;
