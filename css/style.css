@@ -888,6 +888,9 @@ a.search-link {
     color: #0c4f72;
     width: auto;
     display: inline !important; }
+    @media (max-width: 760px) {
+      #primary a.search-link h3 {
+        border: 0; } }
   a.search-link img {
     margin-right: 36px;
     margin-bottom: 18px; }
