@@ -543,12 +543,16 @@ article.post
 	+mobile
 		padding: 0 10px
 
+	h2
+		text-shadow: 2px 2px 4px rgba(30,10,0,0.2)
+
 .post-cover
 	opacity: 0.7
 	width: 100%
 	height: 100%
-	+transition(opacity 0.35s)
+	+transition(opacity 0.35s ease)
 	position: absolute
+	-webkit-transform: translate3d(0,0,0)
 		
 #load-more-holder
 	height: 150px
