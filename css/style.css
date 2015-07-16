@@ -837,6 +837,8 @@ article.post {
   padding: 5px 10px;
   display: inline-block;
   margin: 10px 10px 10px 0; }
+  #platforms li::selection {
+    color: #fffcfa; }
 
 blockquote {
   border-left: 4px solid #ccc;
