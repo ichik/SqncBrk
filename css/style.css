@@ -114,7 +114,22 @@ textarea {
   font-weight: inherit; }
 
 button,
-input,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
 select,
 textarea {
   min-height: 1.5em; }
