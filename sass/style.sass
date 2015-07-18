@@ -18,48 +18,31 @@ $mobile-width: 320px
 // mixins
 =transform($str)
 	-webkit-transform: #{$str}
-	-moz-transform: #{$str}
-	-ms-transform: #{$str}
 	transform: #{$str}
 
 =transition($args...)
-	-webkit-transition: #{$args}
-	-moz-transition: #{$args}
-	-ms-transition: #{$args}
 	transition: #{$args}
 
 =keyframes($name)
 	@-webkit-keyframes #{$name}
-		@content
-	@-moz-keyframes #{$name}
-		@content
-	@-ms-keyframes #{$name}
 		@content
 	@keyframes #{$name}
 		@content
 
 =animation($str)
 	-webkit-animation: #{$str}
-	-moz-animation: #{$str}
-	-ms-animation: #{$str}
 	animation: #{$str}
 
 =animation-duration($str)
 	-webkit-animation-duration: #{$str}
-	-moz-animation-duration: #{$str}
-	-ms-animation-duration: #{$str}
 	animation-duration: #{$str}
 
 =animation-timing-function($str)
 	-webkit-animation-timing-function: #{$str}
-	-moz-animation-timing-function: #{$str}
-	-ms-animation-timing-function: #{$str}
 	animation-timing-function: #{$str}
 
 =animation-iteration-count($str)
 	-webkit-animation-iteration-count: #{$str}
-	-moz-animation-iteration-count: #{$str}
-	-ms-animation-iteration-count: #{$str}
 	animation-iteration-count: #{$str}
 
 =tablet
@@ -75,31 +58,32 @@ $mobile-width: 320px
 		@content
 
 =flexbox
-	display: -moz-box
-	display: -ms-flexbox
 	display: -webkit-flex
 	display: flex
 
 =flex($values...)
-	-moz-box-flex: #{$values}
 	-webkit-flex: #{$values}
-	-ms-flex: #{$values}
 	flex: #{$values}
 
 =justify-content($value)
 	-webkit-justify-content: #{$value}
-	-ms-justify-content: #{$value}
 	justify-content: #{$value}
 
 =flex-wrap($value)
 	-webkit-flex-wrap: #{$value}
-	-ms-flex-wrap: #{$value}
 	flex-wrap: #{$value}
 
 =align-content($value)
 	-webkit-align-content: #{$value}
-	-ms-align-content: #{$value}
 	align-content: #{$value}
+
+=order($value)
+	-webkit-order: #{$value}
+	order: #{$value}
+
+=flex-direction($value)
+	-webkit-flex-direction: #{$value}
+	flex-direction: #{$value}
 
 @function str-replace($string, $search, $replace: "")
 	$index: str-index($string, $search)
@@ -370,7 +354,6 @@ h1
 	width: $mainwidth
 	margin: 66px auto 0 auto
 	+flexbox()
-	+justify-content(space-between)
 	+flex-wrap(wrap)
 	+align-content(flex-start)
 
@@ -378,14 +361,16 @@ h1
 		margin: 16px auto 0 auto
 
 	+mobile
-		flex-direction: column
+		+flex-direction(column)
 		+justify-content(flex-start)
-		margin-top: 90px
-		max-width: 200px
+		margin-top: 12px
+		padding-top: $baselineheight * 1.5
 
 	#about-links
 		+tablet
 			padding-left: 190px
+		+mobile
+			+order(2)
 
 	li
 		+tablet
@@ -394,6 +379,7 @@ h1
 
 		+mobile
 			font-size: $basefontsize
+			text-align: center
 	
 .nav-trigger
 	position: fixed
@@ -436,6 +422,8 @@ h1
 			display: block
 			margin-right: 0
 			margin-bottom: 20px
+			font-size: $basefontsize * 1.5
+			line-height: $baselineheight
 	
 // morphing search
 .morphsearch-form
@@ -444,10 +432,11 @@ h1
 	font-size: $basefontsize
 	line-height: $baselineheight
 	+transform(translate3d(0, 0, 0))
-	+transition(width 0.3s ease)
+	+transition(width 0.3s ease, padding-left 0.2s ease-in)
 
 	+mobile
-		width: 200px
+		width: 100%
+		margin-bottom: $baselineheight * 2
 
 	+tablet
 		font-size: $basefontsize * 0.8
@@ -462,7 +451,17 @@ h1
 	
 	&:focus
 		outline: 0
-		
+
+	+mobile
+		text-align: center
+		width: 100%
+		padding-top: 0
+		font-size: $basefontsize * 1.5
+		margin-top: 0
+		line-height: $baselineheight * 2
+
+.nav-trigger:checked ~ .menu-wrap > .hamburger-insides > .morphsearch-input
+	margin-top: 40px
 		
 .morphsearch-submit,.search-submit
 	opacity: 0
@@ -470,6 +469,8 @@ h1
 .open .morphsearch-form
 	width: $mainwidth
 	+transform(translate3d(0, 0, 0))
+	+mobile
+		width: auto
 
 .open .morphsearch-input
 	font-size: $basefontsize * 5
@@ -479,9 +480,9 @@ h1
 
 	+mobile
 		padding-top: 0
-		font-size: $basefontsize * 2
-		line-height: $baselineheight
-		width: 240px
+		font-size: $basefontsize * 1.5
+		margin-top: 0
+		line-height: $baselineheight * 2
 
 .search-form
 	@extend .morphsearch-form
@@ -496,7 +497,7 @@ h1
 		margin: 0 0 0 20px
 
 	+mobile
-		width: 200px !important
+		margin-top: 100px
 	
 .search-input
 	@extend .morphsearch-input
