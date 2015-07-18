@@ -812,7 +812,6 @@ article.post {
     height: 40px;
     margin: 0 auto; }
   #scroll-to-content p {
-    font-size: 14px;
     -webkit-animation: scroll 2s infinite;
     -moz-animation: scroll 2s infinite;
     -ms-animation: scroll 2s infinite;
