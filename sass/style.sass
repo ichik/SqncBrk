@@ -18,48 +18,48 @@ $mobile-width: 320px
 // mixins
 =transform($str)
 	-webkit-transform: #{$str}
-	//-moz-transform: #{$str}
-	//-ms-transform: #{$str}
+	-moz-transform: #{$str}
+	-ms-transform: #{$str}
 	transform: #{$str}
 
 =transition($args...)
-//	-webkit-transition: #{$args}
-//	-moz-transition: #{$args}
-//	-ms-transition: #{$args}
+	-webkit-transition: #{$args}
+	-moz-transition: #{$args}
+	-ms-transition: #{$args}
 	transition: #{$args}
 
 =keyframes($name)
 	@-webkit-keyframes #{$name}
 		@content
-//	@-moz-keyframes #{$name}
-//		@content
-//	@-ms-keyframes #{$name}
-//		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
 	@keyframes #{$name}
 		@content
 
 =animation($str)
 	-webkit-animation: #{$str}
-//	-moz-animation: #{$str}
-//	-ms-animation: #{$str}
+	-moz-animation: #{$str}
+	-ms-animation: #{$str}
 	animation: #{$str}
 
 =animation-duration($str)
 	-webkit-animation-duration: #{$str}
-//	-moz-animation-duration: #{$str}
-//	-ms-animation-duration: #{$str}
+	-moz-animation-duration: #{$str}
+	-ms-animation-duration: #{$str}
 	animation-duration: #{$str}
 
 =animation-timing-function($str)
 	-webkit-animation-timing-function: #{$str}
-//	-moz-animation-timing-function: #{$str}
-//	-ms-animation-timing-function: #{$str}
+	-moz-animation-timing-function: #{$str}
+	-ms-animation-timing-function: #{$str}
 	animation-timing-function: #{$str}
 
 =animation-iteration-count($str)
 	-webkit-animation-iteration-count: #{$str}
-//	-moz-animation-iteration-count: #{$str}
-//	-ms-animation-iteration-count: #{$str}
+	-moz-animation-iteration-count: #{$str}
+	-ms-animation-iteration-count: #{$str}
 	animation-iteration-count: #{$str}
 
 =tablet
@@ -75,36 +75,32 @@ $mobile-width: 320px
 		@content
 
 =flexbox
-//	display: -moz-box
-//	display: -ms-flexbox
+	display: -moz-box
+	display: -ms-flexbox
 	display: -webkit-flex
 	display: flex
 
 =flex($values...)
-	//-moz-box-flex: #{$values}
+	-moz-box-flex: #{$values}
 	-webkit-flex: #{$values}
-	//-ms-flex: #{$values}
+	-ms-flex: #{$values}
 	flex: #{$values}
 
 =justify-content($value)
 	-webkit-justify-content: #{$value}
-	//-ms-justify-content: #{$value}
+	-ms-justify-content: #{$value}
 	justify-content: #{$value}
 
 =flex-wrap($value)
 	-webkit-flex-wrap: #{$value}
-	//-ms-flex-wrap: #{$value}
+	-ms-flex-wrap: #{$value}
 	flex-wrap: #{$value}
 
 =align-content($value)
 	-webkit-align-content: #{$value}
-	//-ms-align-content: #{$value}
+	-ms-align-content: #{$value}
 	align-content: #{$value}
 
-=order($value)
-	-webkit-order: #{$value}
-	order: #{$value}
-	
 @function str-replace($string, $search, $replace: "")
 	$index: str-index($string, $search)
 	@if $index
@@ -384,15 +380,12 @@ h1
 	+mobile
 		flex-direction: column
 		+justify-content(flex-start)
-		margin-top: 12px
+		margin-top: 90px
 		max-width: 200px
 
 	#about-links
 		+tablet
 			padding-left: 190px
-
-		+mobile
-			+order(2)
 
 	li
 		+tablet
@@ -455,8 +448,6 @@ h1
 
 	+mobile
 		width: 200px
-		+order(1)
-		margin-bottom: $baselineheight * 2
 
 	+tablet
 		font-size: $basefontsize * 0.8
