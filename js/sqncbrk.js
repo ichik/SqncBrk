@@ -1,4 +1,17 @@
 (function() {
+	var bLazy = new Blazy({
+		breakpoints: [{
+			width: 420 // max-width
+			, src: 'data-src-small'
+		}
+		, {
+			width: 1024 // max-width
+			, src: 'data-src-medium'
+		}]	
+	});
+})();
+
+(function() {
 	var morphSearch = document.getElementById( 'morphSearch' ),
 		input = morphSearch.querySelector( 'input.morphsearch-input' ),
 		ctrlClose = document.getElementById( 'open-button' );

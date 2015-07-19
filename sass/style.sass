@@ -243,6 +243,14 @@ a,a:link
 	100%
 		opacity: 0
 		+transform(translate3d(0, 10px, 0))
+	
+// lazy-load
+.b-lazy
+	+transition(opacity 500ms ease-in-out)
+	opacity: 0
+	
+.b-loaded
+	opacity: 1
 
 // logo
 h1
@@ -554,6 +562,10 @@ article.post
 	+transition(opacity 0.35s ease)
 	position: absolute
 	-webkit-transform: translate3d(0,0,0)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	background-color: $black
 		
 #load-more-holder
 	height: 150px
