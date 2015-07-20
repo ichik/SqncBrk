@@ -773,7 +773,7 @@ blockquote {
     margin: 0 auto; }
 
 body.error404 {
-  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000a14;
+  background: url("../images/CaveStory.gif") 50% 100% no-repeat #000;
   min-height: 100vh;
   overflow: hidden; }
   body.error404 #primary {
