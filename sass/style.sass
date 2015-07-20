@@ -190,9 +190,12 @@ p,blockquote,li
 
 abbr
 	text-transform: uppercase
-	font-size: $basefontsize * 0.8
+	font-size: $basefontsize * 0.75
 	letter-spacing: $basefontsize * 0.1
 	font-family: MuseoBold
+
+	+mobile
+		font-size: $basefontsize * 0.6
 	
 	&.def
 		border-bottom: 1px dotted rgba(0,0,0,0.4)
