@@ -180,6 +180,9 @@ textarea {
 @font-face {
   font-family: Museo;
   src: url("../fonts/MuseoCyrl_700Web.woff") format("woff"); }
+@font-face {
+  font-family: MuseoBold;
+  src: url("../fonts/MuseoSansCyrl_500Web.woff") format("woff"); }
 body {
   font-family: MuseoSans;
   -webkit-backface-visibility: hidden;
@@ -244,8 +247,13 @@ p, blockquote, li {
       line-height: 32.4px; } }
 
 abbr {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
-  cursor: help; }
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: MuseoBold; }
+  abbr.def {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+    cursor: help; }
 
 .highlight {
   background: #000a14;

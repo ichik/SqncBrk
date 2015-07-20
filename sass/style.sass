@@ -120,6 +120,10 @@ $mobile-width: 320px
 	font-family: Museo
 	src: url("../fonts/MuseoCyrl_700Web.woff") format("woff")
 
+@font-face
+	font-family: MuseoBold
+	src: url("../fonts/MuseoSansCyrl_500Web.woff") format("woff")
+
 body
 	font-family: MuseoSans
 	-webkit-backface-visibility: hidden
@@ -185,8 +189,14 @@ p,blockquote,li
 		line-height: $baselineheight * 0.9
 
 abbr
-	border-bottom: 1px dotted rgba(0,0,0,0.4)
-	cursor: help
+	text-transform: uppercase
+	font-size: $basefontsize * 0.8
+	letter-spacing: $basefontsize * 0.1
+	font-family: MuseoBold
+	
+	&.def
+		border-bottom: 1px dotted rgba(0,0,0,0.4)
+		cursor: help
 
 .highlight
 	background: $black
