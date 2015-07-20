@@ -438,7 +438,7 @@ h1 {
 .menu-wrap {
   position: fixed;
   height: 0px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 252, 250, 0.95);
   z-index: 999;
   width: 100%;
   box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5);
@@ -513,7 +513,7 @@ h1 {
 
 .menu-wrap.open {
   height: 100% !important;
-  background: white;
+  background: #fffcfa;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 

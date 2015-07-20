@@ -6,7 +6,7 @@ $basefontsize: 20px
 $baselineheight: 36px
 $mainwidth: 740px
 $yellow: #f0ad2c
-$white: #fffcfa
+$white: rgb(255, 252, 250)
 $black: #000a14
 $grey: #ccc
 $blue: #0c4f72
@@ -370,7 +370,7 @@ h1
 .menu-wrap
 	position: fixed
 	height: 0px
-	background: rgba(255,255,255,0.95)
+	background: rgba(255, 252, 250,0.95)
 	z-index: 999
 	width: 100%
 	box-shadow: 0 2px 12px -4px rgba(31, 31, 31, 0.5)
@@ -436,7 +436,7 @@ h1
 
 .menu-wrap.open
 	height: 100% !important
-	background: rgb(255,255,255)
+	background: $white
 	+transform(translate3d(0,0,0))
 	
 .nav-trigger:checked ~ #open-button > .horizontal
