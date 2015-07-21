@@ -716,8 +716,14 @@ article.post {
     right: 0;
     object-fit: cover;
     overflow: hidden; }
+    @media (max-width: 1020px) {
+      .article-cover video {
+        display: none; } }
   .article-cover video + .post-cover {
     opacity: 0; }
+    @media (max-width: 1020px) {
+      .article-cover video + .post-cover {
+        opacity: 1; } }
 
 #scroll-to-content {
   width: 100%;
