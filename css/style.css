@@ -567,11 +567,12 @@ h1 {
       width: 90px; } }
 
 .morphsearch-input, .search-input {
-  transition: font-size 0.4s ease, line-height 0.4s ease, margin-top 0.4s ease, width 0.9s ease;
+  transition: font-size 0.4s ease, line-height 0.1s ease-in-out, margin-top 0.4s ease, width 0.9s ease;
   z-index: 1001;
   top: auto;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  width: 150px; }
   .morphsearch-input:focus, .search-input:focus {
     outline: 0; }
   @media (max-width: 760px) {
@@ -590,9 +591,7 @@ h1 {
   opacity: 0; }
 
 .open .morphsearch-form, .open .search-form {
-  width: 740px;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  width: 740px; }
   @media (max-width: 760px) {
     .open .morphsearch-form, .open .search-form {
       width: auto; } }

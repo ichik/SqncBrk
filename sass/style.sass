@@ -488,10 +488,11 @@ h1
 		width: 90px
 
 .morphsearch-input
-	+transition(font-size 0.4s ease, line-height 0.4s ease, margin-top 0.4s ease, width 0.9s ease)
+	+transition(font-size 0.4s ease, line-height 0.1s ease-in-out, margin-top 0.4s ease, width 0.9s ease)
 	z-index: 1001
 	top: auto
 	+transform(translate3d(0, 0, 0))
+	width: 150px
 	
 	&:focus
 		outline: 0
@@ -512,7 +513,6 @@ h1
 
 .open .morphsearch-form
 	width: $mainwidth
-	+transform(translate3d(0, 0, 0))
 	+mobile
 		width: auto
 
