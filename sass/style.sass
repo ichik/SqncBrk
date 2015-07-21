@@ -675,8 +675,14 @@ article.post
 		object-fit: cover
 		overflow: hidden
 
+		+tabletandmobile
+			display: none
+
 	video + .post-cover
 		opacity: 0
+
+		+tabletandmobile
+			opacity: 1
 
 #scroll-to-content
 	width: 100%
