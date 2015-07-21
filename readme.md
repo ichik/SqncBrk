@@ -1,3 +1,7 @@
+# Current status of the project
+
+Well, that was easy enough. HTML, CSS and JS (apart from loading more content for the index) is done. Now I'll try to make this into [GRAV](http://getgrav.org) theme (or stick to Wordpress if I'll fail to master the power of programming).
+
 # SqncBrk
 A desperate attempt to rewrite http://sequencebreak.ru
 
